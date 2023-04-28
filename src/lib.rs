@@ -409,7 +409,7 @@ pub use url;
 /// A wrapper around a list of bytes.
 ///
 /// Used in Kubernetes types whose JSON representation uses a base64-encoded string for a list of bytes.
-#[derive(Clone, Debug, Default, Eq, Ord, PartialEq, PartialOrd)]
+#[derive(Clone, Debug, Default, Eq, Ord, PartialEq, PartialOrd, value_size::Size)]
 pub struct ByteString(pub Vec<u8>);
 
 impl<'de> serde::Deserialize<'de> for ByteString {

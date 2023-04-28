@@ -19,7 +19,7 @@ pub(crate) fn generate(
 	let derives =
 		derives
 		.map(|Derives { clone, copy, default, eq, ord, partial_eq, partial_ord }| format!(
-			"#[derive({clone}{copy}Debug{default}{eq}{ord}{partial_eq}{partial_ord})]\n",
+			"#[derive({clone}{copy}Debug{default}{eq}{ord}{partial_eq}{partial_ord}, value_size::Size)]\n",
 			clone = if clone { "Clone, " } else { "" },
 			copy = if copy { "Copy, " } else { "" },
 			default = if default { ", Default" } else { "" },

@@ -45,6 +45,7 @@ serde_json = { version = "1", default-features = false, features = [
 ] }
 serde-value = { version = "0.7", default-features = false }
 url = { version = "2", optional = true, default-features = false }
+value-size = { git = "https://github.com/stackabletech/value-size.git" }
 
 [features]
 default = ["api"]

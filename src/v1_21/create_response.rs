@@ -2,7 +2,7 @@
 
 /// The common response type for all create API operations.
 #[cfg(feature = "api")]
-#[derive(Debug)]
+#[derive(Debug, value_size::Size)]
 pub enum CreateResponse<T> where T: crate::serde::de::DeserializeOwned {
     Ok(T),
     Created(T),

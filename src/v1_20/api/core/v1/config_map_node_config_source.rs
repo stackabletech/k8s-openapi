@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ConfigMapNodeConfigSource
 
 /// ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ConfigMapNodeConfigSource {
     /// KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
     pub kubelet_config_key: String,
@@ -18,6 +18,7 @@ pub struct ConfigMapNodeConfigSource {
     /// UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
     pub uid: Option<String>,
 }
+
 
 impl crate::DeepMerge for ConfigMapNodeConfigSource {
     fn merge_from(&mut self, other: Self) {

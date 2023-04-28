@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NodeSpec
 
 /// NodeSpec describes the attributes that a node is created with.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeSpec {
     /// Deprecated: Previously used to specify the source of the node's configuration for the DynamicKubeletConfig feature. This feature is removed from Kubelets as of 1.24 and will be fully removed in 1.26.
     pub config_source: Option<crate::api::core::v1::NodeConfigSource>,
@@ -24,6 +24,7 @@ pub struct NodeSpec {
     /// Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration
     pub unschedulable: Option<bool>,
 }
+
 
 impl crate::DeepMerge for NodeSpec {
     fn merge_from(&mut self, other: Self) {

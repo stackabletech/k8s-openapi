@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1beta1.IngressTLS
 
 /// IngressTLS describes the transport layer security associated with an Ingress.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct IngressTLS {
     /// Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.
     pub hosts: Option<Vec<String>>,
@@ -9,6 +9,7 @@ pub struct IngressTLS {
     /// SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the "Host" header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
     pub secret_name: Option<String>,
 }
+
 
 impl crate::DeepMerge for IngressTLS {
     fn merge_from(&mut self, other: Self) {

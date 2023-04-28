@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.discovery.v1.EndpointSlice
 
 /// EndpointSlice represents a subset of the endpoints that implement a service. For a given service there may be multiple EndpointSlice objects, selected by labels, which must be joined to produce the full set of endpoints.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EndpointSlice {
     /// addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
     pub address_type: String,
@@ -15,6 +15,7 @@ pub struct EndpointSlice {
     /// ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.
     pub ports: Option<Vec<crate::api::discovery::v1::EndpointPort>>,
 }
+
 
 // Begin discovery.k8s.io/v1/EndpointSlice
 

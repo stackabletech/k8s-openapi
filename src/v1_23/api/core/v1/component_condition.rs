@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ComponentCondition
 
 /// Information about the condition of a component.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ComponentCondition {
     /// Condition error code for a component. For example, a health check error code.
     pub error: Option<String>,
@@ -15,6 +15,7 @@ pub struct ComponentCondition {
     /// Type of condition for a component. Valid value: "Healthy"
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for ComponentCondition {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.PodSecurityPolicy
 
 /// PodSecurityPolicy governs the ability to make requests that affect the Security Context that will be applied to a pod and container. Deprecated in 1.21.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodSecurityPolicy {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -9,6 +9,7 @@ pub struct PodSecurityPolicy {
     /// spec defines the policy enforced.
     pub spec: Option<crate::api::policy::v1beta1::PodSecurityPolicySpec>,
 }
+
 
 // Begin policy/v1beta1/PodSecurityPolicy
 

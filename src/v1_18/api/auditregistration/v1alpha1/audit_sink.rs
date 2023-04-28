@@ -1,13 +1,14 @@
 // Generated from definition io.k8s.api.auditregistration.v1alpha1.AuditSink
 
 /// AuditSink represents a cluster level audit sink
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AuditSink {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
     /// Spec defines the audit configuration spec
     pub spec: Option<crate::api::auditregistration::v1alpha1::AuditSinkSpec>,
 }
+
 
 // Begin auditregistration.k8s.io/v1alpha1/AuditSink
 

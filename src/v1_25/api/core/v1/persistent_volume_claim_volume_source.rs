@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PersistentVolumeClaimVolumeSource
 
 /// PersistentVolumeClaimVolumeSource references the user's PVC in the same namespace. This volume finds the bound PV and mounts that volume for the pod. A PersistentVolumeClaimVolumeSource is, essentially, a wrapper around another type of volume that is owned by someone else (the system).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PersistentVolumeClaimVolumeSource {
     /// claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
     pub claim_name: String,
@@ -9,6 +9,7 @@ pub struct PersistentVolumeClaimVolumeSource {
     /// readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
     pub read_only: Option<bool>,
 }
+
 
 impl crate::DeepMerge for PersistentVolumeClaimVolumeSource {
     fn merge_from(&mut self, other: Self) {

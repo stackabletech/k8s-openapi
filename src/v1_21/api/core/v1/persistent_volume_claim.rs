@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PersistentVolumeClaim
 
 /// PersistentVolumeClaim is a user's request for and claim to a persistent volume
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PersistentVolumeClaim {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct PersistentVolumeClaim {
     /// Status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
     pub status: Option<crate::api::core::v1::PersistentVolumeClaimStatus>,
 }
+
 
 // Begin /v1/PersistentVolumeClaim
 

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.Preconditions
 
 /// Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Preconditions {
     /// Specifies the target ResourceVersion
     pub resource_version: Option<String>,
@@ -9,6 +9,7 @@ pub struct Preconditions {
     /// Specifies the target UID.
     pub uid: Option<String>,
 }
+
 
 impl crate::DeepMerge for Preconditions {
     fn merge_from(&mut self, other: Self) {

@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceStatus
 
 /// APIServiceStatus contains derived information about an API server
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct APIServiceStatus {
     /// Current service state of apiService.
     pub conditions: Option<Vec<crate::kube_aggregator::pkg::apis::apiregistration::v1::APIServiceCondition>>,
 }
+
 
 impl crate::DeepMerge for APIServiceStatus {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.rbac.v1alpha1.RoleRef
 
 /// RoleRef contains information that points to the role being used
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct RoleRef {
     /// APIGroup is the group for the resource being referenced
     pub api_group: String,
@@ -12,6 +12,7 @@ pub struct RoleRef {
     /// Name is the name of resource being referenced
     pub name: String,
 }
+
 
 impl crate::DeepMerge for RoleRef {
     fn merge_from(&mut self, other: Self) {

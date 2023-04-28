@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.discovery.v1.Endpoint
 
 /// Endpoint represents a single logical "backend" implementing a service.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Endpoint {
     /// addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
     pub addresses: Vec<String>,
@@ -27,6 +27,7 @@ pub struct Endpoint {
     /// zone is the name of the Zone this endpoint exists in.
     pub zone: Option<String>,
 }
+
 
 impl crate::DeepMerge for Endpoint {
     fn merge_from(&mut self, other: Self) {

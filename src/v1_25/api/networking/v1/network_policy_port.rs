@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1.NetworkPolicyPort
 
 /// NetworkPolicyPort describes a port to allow traffic on
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NetworkPolicyPort {
     /// If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port.
     pub end_port: Option<i32>,
@@ -12,6 +12,7 @@ pub struct NetworkPolicyPort {
     /// The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
     pub protocol: Option<String>,
 }
+
 
 impl crate::DeepMerge for NetworkPolicyPort {
     fn merge_from(&mut self, other: Self) {

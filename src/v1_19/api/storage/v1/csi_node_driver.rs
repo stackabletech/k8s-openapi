@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.storage.v1.CSINodeDriver
 
 /// CSINodeDriver holds information about the specification of one CSI driver installed on a node
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CSINodeDriver {
     /// allocatable represents the volume resources of a node that are available for scheduling. This field is beta.
     pub allocatable: Option<crate::api::storage::v1::VolumeNodeResources>,
@@ -15,6 +15,7 @@ pub struct CSINodeDriver {
     /// topologyKeys is the list of keys supported by the driver. When a driver is initialized on a cluster, it provides a set of topology keys that it understands (e.g. "company.com/zone", "company.com/region"). When a driver is initialized on a node, it provides the same topology keys along with values. Kubelet will expose these topology keys as labels on its own node object. When Kubernetes does topology aware provisioning, it can use this list to determine which labels it should retrieve from the node object and pass back to the driver. It is possible for different nodes to use different topology keys. This can be empty if driver does not support topology.
     pub topology_keys: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for CSINodeDriver {
     fn merge_from(&mut self, other: Self) {

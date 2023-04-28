@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.Status
 
 /// Status is a return value for calls that don't return other objects.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Status {
     /// Suggested HTTP return code for this status, 0 if not set.
     pub code: Option<i32>,
@@ -21,6 +21,7 @@ pub struct Status {
     /// Status of the operation. One of: "Success" or "Failure". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub status: Option<String>,
 }
+
 
 impl crate::Resource for Status {
     const API_VERSION: &'static str = "v1";

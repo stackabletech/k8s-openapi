@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR
 
 /// ServerAddressByClientCIDR helps the client to determine the server address that they should use, depending on the clientCIDR that they match.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServerAddressByClientCIDR {
     /// The CIDR with which clients can match their IP to figure out the server address that they should use.
     pub client_cidr: String,
@@ -9,6 +9,7 @@ pub struct ServerAddressByClientCIDR {
     /// Address of this server, suitable for a client that matches the above CIDR. This can be a hostname, hostname:port, IP or IP:port.
     pub server_address: String,
 }
+
 
 impl crate::DeepMerge for ServerAddressByClientCIDR {
     fn merge_from(&mut self, other: Self) {

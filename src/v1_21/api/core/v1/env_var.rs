@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.EnvVar
 
 /// EnvVar represents an environment variable present in a Container.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EnvVar {
     /// Name of the environment variable. Must be a C_IDENTIFIER.
     pub name: String,
@@ -12,6 +12,7 @@ pub struct EnvVar {
     /// Source for the environment variable's value. Cannot be used if value is not empty.
     pub value_from: Option<crate::api::core::v1::EnvVarSource>,
 }
+
 
 impl crate::DeepMerge for EnvVar {
     fn merge_from(&mut self, other: Self) {

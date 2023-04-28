@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.PodFailurePolicyRule
 
 /// PodFailurePolicyRule describes how a pod failure is handled when the requirements are met. One of OnExitCodes and onPodConditions, but not both, can be used in each rule.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodFailurePolicyRule {
     /// Specifies the action taken on a pod failure when the requirements are satisfied. Possible values are: - FailJob: indicates that the pod's job is marked as Failed and all
     ///   running pods are terminated.
@@ -19,6 +19,7 @@ pub struct PodFailurePolicyRule {
     /// Represents the requirement on the pod conditions. The requirement is represented as a list of pod condition patterns. The requirement is satisfied if at least one pattern matches an actual pod condition. At most 20 elements are allowed.
     pub on_pod_conditions: Vec<crate::api::batch::v1::PodFailurePolicyOnPodConditionsPattern>,
 }
+
 
 impl crate::DeepMerge for PodFailurePolicyRule {
     fn merge_from(&mut self, other: Self) {

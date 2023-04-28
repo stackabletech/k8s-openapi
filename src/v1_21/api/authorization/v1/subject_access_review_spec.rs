@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authorization.v1.SubjectAccessReviewSpec
 
 /// SubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SubjectAccessReviewSpec {
     /// Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
     pub extra: Option<std::collections::BTreeMap<String, Vec<String>>>,
@@ -21,6 +21,7 @@ pub struct SubjectAccessReviewSpec {
     /// User is the user you're testing for. If you specify "User" but not "Groups", then is it interpreted as "What if User were not a member of any groups
     pub user: Option<String>,
 }
+
 
 impl crate::DeepMerge for SubjectAccessReviewSpec {
     fn merge_from(&mut self, other: Self) {

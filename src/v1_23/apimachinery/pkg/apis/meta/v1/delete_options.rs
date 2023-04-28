@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.DeleteOptions
 
 /// DeleteOptions may be provided when deleting an API object.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DeleteOptions {
     /// APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     pub api_version: Option<String>,
@@ -24,6 +24,7 @@ pub struct DeleteOptions {
     /// Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
     pub propagation_policy: Option<String>,
 }
+
 
 impl crate::DeepMerge for DeleteOptions {
     fn merge_from(&mut self, other: Self) {

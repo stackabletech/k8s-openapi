@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authorization.v1beta1.SubjectAccessReviewStatus
 
 /// SubjectAccessReviewStatus
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SubjectAccessReviewStatus {
     /// Allowed is required. True if the action would be allowed, false otherwise.
     pub allowed: bool,
@@ -15,6 +15,7 @@ pub struct SubjectAccessReviewStatus {
     /// Reason is optional.  It indicates why a request was allowed or denied.
     pub reason: Option<String>,
 }
+
 
 impl crate::DeepMerge for SubjectAccessReviewStatus {
     fn merge_from(&mut self, other: Self) {

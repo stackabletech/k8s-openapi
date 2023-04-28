@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource
 
 /// Represents a Photon Controller persistent disk resource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PhotonPersistentDiskVolumeSource {
     /// fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
     pub fs_type: Option<String>,
@@ -9,6 +9,7 @@ pub struct PhotonPersistentDiskVolumeSource {
     /// pdID is the ID that identifies Photon Controller persistent disk
     pub pd_id: String,
 }
+
 
 impl crate::DeepMerge for PhotonPersistentDiskVolumeSource {
     fn merge_from(&mut self, other: Self) {

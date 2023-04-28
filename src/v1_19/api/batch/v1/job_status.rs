@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.JobStatus
 
 /// JobStatus represents the current state of a Job.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct JobStatus {
     /// The number of actively running pods.
     pub active: Option<i32>,
@@ -21,6 +21,7 @@ pub struct JobStatus {
     /// The number of pods which reached phase Succeeded.
     pub succeeded: Option<i32>,
 }
+
 
 impl crate::DeepMerge for JobStatus {
     fn merge_from(&mut self, other: Self) {

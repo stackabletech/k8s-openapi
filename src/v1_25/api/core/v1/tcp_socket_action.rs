@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.TCPSocketAction
 
 /// TCPSocketAction describes an action based on opening a socket
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TCPSocketAction {
     /// Optional: Host name to connect to, defaults to the pod IP.
     pub host: Option<String>,
@@ -9,6 +9,7 @@ pub struct TCPSocketAction {
     /// Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
     pub port: crate::apimachinery::pkg::util::intstr::IntOrString,
 }
+
 
 impl crate::DeepMerge for TCPSocketAction {
     fn merge_from(&mut self, other: Self) {

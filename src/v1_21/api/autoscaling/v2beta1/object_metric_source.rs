@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta1.ObjectMetricSource
 
 /// ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ObjectMetricSource {
     /// averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
     pub average_value: Option<crate::apimachinery::pkg::api::resource::Quantity>,
@@ -18,6 +18,7 @@ pub struct ObjectMetricSource {
     /// targetValue is the target value of the metric (as a quantity).
     pub target_value: crate::apimachinery::pkg::api::resource::Quantity,
 }
+
 
 impl crate::DeepMerge for ObjectMetricSource {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerStatus
 
 /// HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HorizontalPodAutoscalerStatus {
     /// conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.
     pub conditions: Option<Vec<crate::api::autoscaling::v2::HorizontalPodAutoscalerCondition>>,
@@ -21,6 +21,7 @@ pub struct HorizontalPodAutoscalerStatus {
     /// observedGeneration is the most recent generation observed by this autoscaler.
     pub observed_generation: Option<i64>,
 }
+
 
 impl crate::DeepMerge for HorizontalPodAutoscalerStatus {
     fn merge_from(&mut self, other: Self) {

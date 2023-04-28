@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.KeyToPath
 
 /// Maps a string key to a path within a volume.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct KeyToPath {
     /// The key to project.
     pub key: String,
@@ -12,6 +12,7 @@ pub struct KeyToPath {
     /// The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.
     pub path: String,
 }
+
 
 impl crate::DeepMerge for KeyToPath {
     fn merge_from(&mut self, other: Self) {

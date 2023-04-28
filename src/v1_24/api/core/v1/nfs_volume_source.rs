@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NFSVolumeSource
 
 /// Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NFSVolumeSource {
     /// path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
     pub path: String,
@@ -12,6 +12,7 @@ pub struct NFSVolumeSource {
     /// server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
     pub server: String,
 }
+
 
 impl crate::DeepMerge for NFSVolumeSource {
     fn merge_from(&mut self, other: Self) {

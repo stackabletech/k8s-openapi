@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Event
 
 /// Event is a report of an event somewhere in the cluster.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Event {
     /// What action was taken/failed regarding to the Regarding object.
     pub action: Option<String>,
@@ -48,6 +48,7 @@ pub struct Event {
     /// Type of this event (Normal, Warning), new types could be added in the future
     pub type_: Option<String>,
 }
+
 
 // Begin /v1/Event
 

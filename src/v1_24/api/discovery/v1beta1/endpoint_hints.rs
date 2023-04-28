@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.discovery.v1beta1.EndpointHints
 
 /// EndpointHints provides hints describing how an endpoint should be consumed.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EndpointHints {
     /// forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
     pub for_zones: Option<Vec<crate::api::discovery::v1beta1::ForZone>>,
 }
+
 
 impl crate::DeepMerge for EndpointHints {
     fn merge_from(&mut self, other: Self) {

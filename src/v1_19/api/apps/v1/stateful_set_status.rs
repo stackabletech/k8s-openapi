@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.StatefulSetStatus
 
 /// StatefulSetStatus represents the current state of a StatefulSet.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StatefulSetStatus {
     /// collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
     pub collision_count: Option<i32>,
@@ -30,6 +30,7 @@ pub struct StatefulSetStatus {
     /// updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
     pub updated_replicas: Option<i32>,
 }
+
 
 impl crate::DeepMerge for StatefulSetStatus {
     fn merge_from(&mut self, other: Self) {

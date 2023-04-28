@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.PodFailurePolicyOnPodConditionsPattern
 
 /// PodFailurePolicyOnPodConditionsPattern describes a pattern for matching an actual pod condition type.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodFailurePolicyOnPodConditionsPattern {
     /// Specifies the required Pod condition status. To match a pod condition it is required that the specified status equals the pod condition status. Defaults to True.
     pub status: String,
@@ -9,6 +9,7 @@ pub struct PodFailurePolicyOnPodConditionsPattern {
     /// Specifies the required Pod condition type. To match a pod condition it is required that specified type equals the pod condition type.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for PodFailurePolicyOnPodConditionsPattern {
     fn merge_from(&mut self, other: Self) {

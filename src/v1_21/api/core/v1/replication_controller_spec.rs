@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ReplicationControllerSpec
 
 /// ReplicationControllerSpec is the specification of a replication controller.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ReplicationControllerSpec {
     /// Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
     pub min_ready_seconds: Option<i32>,
@@ -15,6 +15,7 @@ pub struct ReplicationControllerSpec {
     /// Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes precedence over a TemplateRef. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
     pub template: Option<crate::api::core::v1::PodTemplateSpec>,
 }
+
 
 impl crate::DeepMerge for ReplicationControllerSpec {
     fn merge_from(&mut self, other: Self) {

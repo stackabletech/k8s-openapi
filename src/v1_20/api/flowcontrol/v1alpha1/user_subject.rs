@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.flowcontrol.v1alpha1.UserSubject
 
 /// UserSubject holds detailed information for user-kind subject.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct UserSubject {
     /// `name` is the username that matches, or "*" to match all usernames. Required.
     pub name: String,
 }
+
 
 impl crate::DeepMerge for UserSubject {
     fn merge_from(&mut self, other: Self) {

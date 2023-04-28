@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerSpec
 
 /// specification of a horizontal pod autoscaler.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HorizontalPodAutoscalerSpec {
     /// upper limit for the number of pods that can be set by the autoscaler; cannot be smaller than MinReplicas.
     pub max_replicas: i32,
@@ -15,6 +15,7 @@ pub struct HorizontalPodAutoscalerSpec {
     /// target average CPU utilization (represented as a percentage of requested CPU) over all the pods; if not specified the default autoscaling policy will be used.
     pub target_cpu_utilization_percentage: Option<i32>,
 }
+
 
 impl crate::DeepMerge for HorizontalPodAutoscalerSpec {
     fn merge_from(&mut self, other: Self) {

@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.policy.v1beta1.AllowedFlexVolume
 
 /// AllowedFlexVolume represents a single Flexvolume that is allowed to be used.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AllowedFlexVolume {
     /// driver is the name of the Flexvolume driver.
     pub driver: String,
 }
+
 
 impl crate::DeepMerge for AllowedFlexVolume {
     fn merge_from(&mut self, other: Self) {

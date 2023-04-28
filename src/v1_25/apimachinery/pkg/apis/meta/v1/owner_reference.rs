@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference
 
 /// OwnerReference contains enough information to let you identify an owning object. An owning object must be in the same namespace as the dependent, or be cluster-scoped, so there is no namespace field.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct OwnerReference {
     /// API version of the referent.
     pub api_version: String,
@@ -21,6 +21,7 @@ pub struct OwnerReference {
     /// UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
     pub uid: String,
 }
+
 
 impl crate::DeepMerge for OwnerReference {
     fn merge_from(&mut self, other: Self) {

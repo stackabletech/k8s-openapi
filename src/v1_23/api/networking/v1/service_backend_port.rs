@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1.ServiceBackendPort
 
 /// ServiceBackendPort is the service port being referenced.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServiceBackendPort {
     /// Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
     pub name: Option<String>,
@@ -9,6 +9,7 @@ pub struct ServiceBackendPort {
     /// Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name".
     pub number: Option<i32>,
 }
+
 
 impl crate::DeepMerge for ServiceBackendPort {
     fn merge_from(&mut self, other: Self) {

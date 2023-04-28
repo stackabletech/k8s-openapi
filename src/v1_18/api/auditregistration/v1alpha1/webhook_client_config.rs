@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.auditregistration.v1alpha1.WebhookClientConfig
 
 /// WebhookClientConfig contains the information to make a connection with the webhook
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct WebhookClientConfig {
     /// `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
     pub ca_bundle: Option<crate::ByteString>,
@@ -24,6 +24,7 @@ pub struct WebhookClientConfig {
     /// Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.
     pub url: Option<String>,
 }
+
 
 impl crate::DeepMerge for WebhookClientConfig {
     fn merge_from(&mut self, other: Self) {

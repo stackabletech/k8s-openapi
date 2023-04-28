@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.FCVolumeSource
 
 /// Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct FCVolumeSource {
     /// fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
     pub fs_type: Option<String>,
@@ -18,6 +18,7 @@ pub struct FCVolumeSource {
     /// wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
     pub wwids: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for FCVolumeSource {
     fn merge_from(&mut self, other: Self) {

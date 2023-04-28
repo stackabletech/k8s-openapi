@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1beta1.FlowSchemaSpec
 
 /// FlowSchemaSpec describes how the FlowSchema's specification looks like.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct FlowSchemaSpec {
     /// `distinguisherMethod` defines how to compute the flow distinguisher for requests that match this schema. `nil` specifies that the distinguisher is disabled and thus will always be the empty string.
     pub distinguisher_method: Option<crate::api::flowcontrol::v1beta1::FlowDistinguisherMethod>,
@@ -15,6 +15,7 @@ pub struct FlowSchemaSpec {
     /// `rules` describes which requests will match this flow schema. This FlowSchema matches a request if and only if at least one member of rules matches the request. if it is an empty slice, there will be no requests matching the FlowSchema.
     pub rules: Option<Vec<crate::api::flowcontrol::v1beta1::PolicyRulesWithSubjects>>,
 }
+
 
 impl crate::DeepMerge for FlowSchemaSpec {
     fn merge_from(&mut self, other: Self) {

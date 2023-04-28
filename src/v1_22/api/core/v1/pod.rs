@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Pod
 
 /// Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Pod {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct Pod {
     /// Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub status: Option<crate::api::core::v1::PodStatus>,
 }
+
 
 // Begin /v1/Pod
 

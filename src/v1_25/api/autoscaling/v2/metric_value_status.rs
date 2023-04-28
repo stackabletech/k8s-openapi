@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2.MetricValueStatus
 
 /// MetricValueStatus holds the current value for a metric
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct MetricValueStatus {
     /// currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
     pub average_utilization: Option<i32>,
@@ -12,6 +12,7 @@ pub struct MetricValueStatus {
     /// value is the current value of the metric (as a quantity).
     pub value: Option<crate::apimachinery::pkg::api::resource::Quantity>,
 }
+
 
 impl crate::DeepMerge for MetricValueStatus {
     fn merge_from(&mut self, other: Self) {

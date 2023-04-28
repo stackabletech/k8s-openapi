@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.LifecycleHandler
 
 /// LifecycleHandler defines a specific action that should be taken in a lifecycle hook. One and only one of the fields, except TCPSocket must be specified.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LifecycleHandler {
     /// Exec specifies the action to take.
     pub exec: Option<crate::api::core::v1::ExecAction>,
@@ -12,6 +12,7 @@ pub struct LifecycleHandler {
     /// Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
     pub tcp_socket: Option<crate::api::core::v1::TCPSocketAction>,
 }
+
 
 impl crate::DeepMerge for LifecycleHandler {
     fn merge_from(&mut self, other: Self) {

@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.storage.v1beta1.CSINodeSpec
 
 /// CSINodeSpec holds information about the specification of all CSI drivers installed on a node
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CSINodeSpec {
     /// drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
     pub drivers: Vec<crate::api::storage::v1beta1::CSINodeDriver>,
 }
+
 
 impl crate::DeepMerge for CSINodeSpec {
     fn merge_from(&mut self, other: Self) {

@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.VolumeNodeAffinity
 
 /// VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VolumeNodeAffinity {
     /// Required specifies hard node constraints that must be met.
     pub required: Option<crate::api::core::v1::NodeSelector>,
 }
+
 
 impl crate::DeepMerge for VolumeNodeAffinity {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.certificates.v1.CertificateSigningRequestSpec
 
 /// CertificateSigningRequestSpec contains the certificate request.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequestSpec {
     /// expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
     ///
@@ -71,6 +71,7 @@ pub struct CertificateSigningRequestSpec {
     /// username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
     pub username: Option<String>,
 }
+
 
 impl crate::DeepMerge for CertificateSigningRequestSpec {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.LocalVolumeSource
 
 /// Local represents directly-attached storage with node affinity (Beta feature)
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LocalVolumeSource {
     /// fsType is the filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a filesystem if unspecified.
     pub fs_type: Option<String>,
@@ -9,6 +9,7 @@ pub struct LocalVolumeSource {
     /// path of the full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
     pub path: String,
 }
+
 
 impl crate::DeepMerge for LocalVolumeSource {
     fn merge_from(&mut self, other: Self) {

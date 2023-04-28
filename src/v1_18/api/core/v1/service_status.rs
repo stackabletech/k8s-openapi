@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.ServiceStatus
 
 /// ServiceStatus represents the current status of a service.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServiceStatus {
     /// LoadBalancer contains the current status of the load-balancer, if one is present.
     pub load_balancer: Option<crate::api::core::v1::LoadBalancerStatus>,
 }
+
 
 impl crate::DeepMerge for ServiceStatus {
     fn merge_from(&mut self, other: Self) {

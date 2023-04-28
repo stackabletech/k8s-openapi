@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Capabilities
 
 /// Adds and removes POSIX capabilities from running containers.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Capabilities {
     /// Added capabilities
     pub add: Option<Vec<String>>,
@@ -9,6 +9,7 @@ pub struct Capabilities {
     /// Removed capabilities
     pub drop: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for Capabilities {
     fn merge_from(&mut self, other: Self) {

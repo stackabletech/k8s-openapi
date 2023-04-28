@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PersistentVolumeClaimCondition
 
 /// PersistentVolumeClaimCondition contails details about state of pvc
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PersistentVolumeClaimCondition {
     /// Last time we probed the condition.
     pub last_probe_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -19,6 +19,7 @@ pub struct PersistentVolumeClaimCondition {
 
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for PersistentVolumeClaimCondition {
     fn merge_from(&mut self, other: Self) {

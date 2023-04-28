@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.events.v1beta1.Event
 
 /// Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, value_size::Size)]
 pub struct Event {
     /// What action was taken/failed regarding to the regarding object.
     pub action: Option<String>,
@@ -47,6 +47,7 @@ pub struct Event {
     /// Type of this event (Normal, Warning), new types could be added in the future.
     pub type_: Option<String>,
 }
+
 
 // Begin events.k8s.io/v1beta1/Event
 

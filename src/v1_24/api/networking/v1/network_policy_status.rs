@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.networking.v1.NetworkPolicyStatus
 
 /// NetworkPolicyStatus describe the current state of the NetworkPolicy.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NetworkPolicyStatus {
     /// Conditions holds an array of metav1.Condition that describe the state of the NetworkPolicy. Current service state
     pub conditions: Option<Vec<crate::apimachinery::pkg::apis::meta::v1::Condition>>,
 }
+
 
 impl crate::DeepMerge for NetworkPolicyStatus {
     fn merge_from(&mut self, other: Self) {

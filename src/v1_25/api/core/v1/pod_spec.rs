@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PodSpec
 
 /// PodSpec is a description of a pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodSpec {
     /// Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.
     pub active_deadline_seconds: Option<i64>,
@@ -120,6 +120,7 @@ pub struct PodSpec {
     /// List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes
     pub volumes: Option<Vec<crate::api::core::v1::Volume>>,
 }
+
 
 impl crate::DeepMerge for PodSpec {
     fn merge_from(&mut self, other: Self) {

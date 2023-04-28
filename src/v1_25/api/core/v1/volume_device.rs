@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.VolumeDevice
 
 /// volumeDevice describes a mapping of a raw block device within a container.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VolumeDevice {
     /// devicePath is the path inside of the container that the device will be mapped to.
     pub device_path: String,
@@ -9,6 +9,7 @@ pub struct VolumeDevice {
     /// name must match the name of a persistentVolumeClaim in the pod
     pub name: String,
 }
+
 
 impl crate::DeepMerge for VolumeDevice {
     fn merge_from(&mut self, other: Self) {

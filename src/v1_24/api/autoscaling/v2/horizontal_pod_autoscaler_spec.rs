@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerSpec
 
 /// HorizontalPodAutoscalerSpec describes the desired functionality of the HorizontalPodAutoscaler.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HorizontalPodAutoscalerSpec {
     /// behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.
     pub behavior: Option<crate::api::autoscaling::v2::HorizontalPodAutoscalerBehavior>,
@@ -18,6 +18,7 @@ pub struct HorizontalPodAutoscalerSpec {
     /// scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.
     pub scale_target_ref: crate::api::autoscaling::v2::CrossVersionObjectReference,
 }
+
 
 impl crate::DeepMerge for HorizontalPodAutoscalerSpec {
     fn merge_from(&mut self, other: Self) {

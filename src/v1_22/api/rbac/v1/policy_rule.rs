@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.rbac.v1.PolicyRule
 
 /// PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PolicyRule {
     /// APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
     pub api_groups: Option<Vec<String>>,
@@ -18,6 +18,7 @@ pub struct PolicyRule {
     /// Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule. '*' represents all verbs.
     pub verbs: Vec<String>,
 }
+
 
 impl crate::DeepMerge for PolicyRule {
     fn merge_from(&mut self, other: Self) {

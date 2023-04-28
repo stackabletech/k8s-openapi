@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ResourceQuotaStatus
 
 /// ResourceQuotaStatus defines the enforced hard limits and observed use.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ResourceQuotaStatus {
     /// Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
     pub hard: Option<std::collections::BTreeMap<String, crate::apimachinery::pkg::api::resource::Quantity>>,
@@ -9,6 +9,7 @@ pub struct ResourceQuotaStatus {
     /// Used is the current observed total usage of the resource in the namespace.
     pub used: Option<std::collections::BTreeMap<String, crate::apimachinery::pkg::api::resource::Quantity>>,
 }
+
 
 impl crate::DeepMerge for ResourceQuotaStatus {
     fn merge_from(&mut self, other: Self) {

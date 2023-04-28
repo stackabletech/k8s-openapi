@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.networking.v1beta1.IngressStatus
 
 /// IngressStatus describe the current state of the Ingress.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct IngressStatus {
     /// LoadBalancer contains the current status of the load-balancer.
     pub load_balancer: Option<crate::api::core::v1::LoadBalancerStatus>,
 }
+
 
 impl crate::DeepMerge for IngressStatus {
     fn merge_from(&mut self, other: Self) {

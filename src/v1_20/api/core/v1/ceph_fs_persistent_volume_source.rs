@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.CephFSPersistentVolumeSource
 
 /// Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CephFSPersistentVolumeSource {
     /// Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
     pub monitors: Vec<String>,
@@ -21,6 +21,7 @@ pub struct CephFSPersistentVolumeSource {
     /// Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
     pub user: Option<String>,
 }
+
 
 impl crate::DeepMerge for CephFSPersistentVolumeSource {
     fn merge_from(&mut self, other: Self) {

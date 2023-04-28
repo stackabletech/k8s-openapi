@@ -1,6 +1,6 @@
 // Generated from definition io.k8s.api.core.v1.PortStatus
 
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PortStatus {
     /// Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
     ///   CamelCase names
@@ -15,6 +15,7 @@ pub struct PortStatus {
     ///
     pub protocol: String,
 }
+
 
 impl crate::DeepMerge for PortStatus {
     fn merge_from(&mut self, other: Self) {

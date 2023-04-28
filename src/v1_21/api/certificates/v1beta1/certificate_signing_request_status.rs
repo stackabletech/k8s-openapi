@@ -1,6 +1,6 @@
 // Generated from definition io.k8s.api.certificates.v1beta1.CertificateSigningRequestStatus
 
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequestStatus {
     /// If request was approved, the controller will place the issued certificate here.
     pub certificate: Option<crate::ByteString>,
@@ -8,6 +8,7 @@ pub struct CertificateSigningRequestStatus {
     /// Conditions applied to the request, such as approval or denial.
     pub conditions: Option<Vec<crate::api::certificates::v1beta1::CertificateSigningRequestCondition>>,
 }
+
 
 impl crate::DeepMerge for CertificateSigningRequestStatus {
     fn merge_from(&mut self, other: Self) {

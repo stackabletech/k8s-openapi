@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.LimitRange
 
 /// LimitRange sets resource usage limits for each kind of resource in a Namespace.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LimitRange {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -9,6 +9,7 @@ pub struct LimitRange {
     /// Spec defines the limits enforced. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub spec: Option<crate::api::core::v1::LimitRangeSpec>,
 }
+
 
 // Begin /v1/LimitRange
 

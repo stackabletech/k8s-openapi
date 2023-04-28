@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ServiceAccount
 
 /// ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral systems, for an identity * a principal that can be authenticated and authorized * a set of secrets
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServiceAccount {
     /// AutomountServiceAccountToken indicates whether pods running as this service account should have an API token automatically mounted. Can be overridden at the pod level.
     pub automount_service_account_token: Option<bool>,
@@ -15,6 +15,7 @@ pub struct ServiceAccount {
     /// Secrets is the list of secrets allowed to be used by pods running using this ServiceAccount. More info: https://kubernetes.io/docs/concepts/configuration/secret
     pub secrets: Option<Vec<crate::api::core::v1::ObjectReference>>,
 }
+
 
 // Begin /v1/ServiceAccount
 

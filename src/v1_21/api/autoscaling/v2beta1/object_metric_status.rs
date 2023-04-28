@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta1.ObjectMetricStatus
 
 /// ObjectMetricStatus indicates the current value of a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ObjectMetricStatus {
     /// averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
     pub average_value: Option<crate::apimachinery::pkg::api::resource::Quantity>,
@@ -18,6 +18,7 @@ pub struct ObjectMetricStatus {
     /// target is the described Kubernetes object.
     pub target: crate::api::autoscaling::v2beta1::CrossVersionObjectReference,
 }
+
 
 impl crate::DeepMerge for ObjectMetricStatus {
     fn merge_from(&mut self, other: Self) {

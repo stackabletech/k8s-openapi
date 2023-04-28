@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.RuntimeClassStrategyOptions
 
 /// RuntimeClassStrategyOptions define the strategy that will dictate the allowable RuntimeClasses for a pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct RuntimeClassStrategyOptions {
     /// allowedRuntimeClassNames is an allowlist of RuntimeClass names that may be specified on a pod. A value of "*" means that any RuntimeClass name is allowed, and must be the only item in the list. An empty list requires the RuntimeClassName field to be unset.
     pub allowed_runtime_class_names: Vec<String>,
@@ -9,6 +9,7 @@ pub struct RuntimeClassStrategyOptions {
     /// defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The default MUST be allowed by the allowedRuntimeClassNames list. A value of nil does not mutate the Pod.
     pub default_runtime_class_name: Option<String>,
 }
+
 
 impl crate::DeepMerge for RuntimeClassStrategyOptions {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.StatefulSetUpdateStrategy
 
 /// StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StatefulSetUpdateStrategy {
     /// RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
     pub rolling_update: Option<crate::api::apps::v1::RollingUpdateStatefulSetStrategy>,
@@ -10,6 +10,7 @@ pub struct StatefulSetUpdateStrategy {
     ///
     pub type_: Option<String>,
 }
+
 
 impl crate::DeepMerge for StatefulSetUpdateStrategy {
     fn merge_from(&mut self, other: Self) {

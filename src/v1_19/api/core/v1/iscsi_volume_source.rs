@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ISCSIVolumeSource
 
 /// Represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ISCSIVolumeSource {
     /// whether support iSCSI Discovery CHAP authentication
     pub chap_auth_discovery: Option<bool>,
@@ -36,6 +36,7 @@ pub struct ISCSIVolumeSource {
     /// iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
     pub target_portal: String,
 }
+
 
 impl crate::DeepMerge for ISCSIVolumeSource {
     fn merge_from(&mut self, other: Self) {

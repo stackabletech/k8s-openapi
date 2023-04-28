@@ -3,7 +3,7 @@
 /// SecretEnvSource selects a Secret to populate the environment variables with.
 ///
 /// The contents of the target Secret's Data field will represent the key-value pairs as environment variables.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SecretEnvSource {
     /// Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     pub name: Option<String>,
@@ -11,6 +11,7 @@ pub struct SecretEnvSource {
     /// Specify whether the Secret must be defined
     pub optional: Option<bool>,
 }
+
 
 impl crate::DeepMerge for SecretEnvSource {
     fn merge_from(&mut self, other: Self) {

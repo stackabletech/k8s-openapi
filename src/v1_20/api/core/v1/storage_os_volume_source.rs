@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.StorageOSVolumeSource
 
 /// Represents a StorageOS persistent volume resource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StorageOSVolumeSource {
     /// Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
     pub fs_type: Option<String>,
@@ -18,6 +18,7 @@ pub struct StorageOSVolumeSource {
     /// VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to "default" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
     pub volume_namespace: Option<String>,
 }
+
 
 impl crate::DeepMerge for StorageOSVolumeSource {
     fn merge_from(&mut self, other: Self) {

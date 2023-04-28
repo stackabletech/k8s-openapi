@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.NodeConfigSource
 
 /// NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeConfigSource {
     /// ConfigMap is a reference to a Node's ConfigMap
     pub config_map: Option<crate::api::core::v1::ConfigMapNodeConfigSource>,
 }
+
 
 impl crate::DeepMerge for NodeConfigSource {
     fn merge_from(&mut self, other: Self) {

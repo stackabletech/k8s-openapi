@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.DeploymentSpec
 
 /// DeploymentSpec is the specification of the desired behavior of the Deployment.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DeploymentSpec {
     /// Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
     pub min_ready_seconds: Option<i32>,
@@ -27,6 +27,7 @@ pub struct DeploymentSpec {
     /// Template describes the pods that will be created.
     pub template: crate::api::core::v1::PodTemplateSpec,
 }
+
 
 impl crate::DeepMerge for DeploymentSpec {
     fn merge_from(&mut self, other: Self) {

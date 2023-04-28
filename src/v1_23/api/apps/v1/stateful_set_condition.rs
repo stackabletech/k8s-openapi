@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.StatefulSetCondition
 
 /// StatefulSetCondition describes the state of a statefulset at a certain point.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StatefulSetCondition {
     /// Last time the condition transitioned from one status to another.
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -18,6 +18,7 @@ pub struct StatefulSetCondition {
     /// Type of statefulset condition.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for StatefulSetCondition {
     fn merge_from(&mut self, other: Self) {

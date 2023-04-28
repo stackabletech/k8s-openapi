@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.discovery.v1beta1.EndpointConditions
 
 /// EndpointConditions represents the current condition of an endpoint.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EndpointConditions {
     /// ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready.
     pub ready: Option<bool>,
 }
+
 
 impl crate::DeepMerge for EndpointConditions {
     fn merge_from(&mut self, other: Self) {

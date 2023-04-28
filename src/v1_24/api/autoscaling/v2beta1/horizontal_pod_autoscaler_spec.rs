@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerSpec
 
 /// HorizontalPodAutoscalerSpec describes the desired functionality of the HorizontalPodAutoscaler.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HorizontalPodAutoscalerSpec {
     /// maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.
     pub max_replicas: i32,
@@ -15,6 +15,7 @@ pub struct HorizontalPodAutoscalerSpec {
     /// scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.
     pub scale_target_ref: crate::api::autoscaling::v2beta1::CrossVersionObjectReference,
 }
+
 
 impl crate::DeepMerge for HorizontalPodAutoscalerSpec {
     fn merge_from(&mut self, other: Self) {

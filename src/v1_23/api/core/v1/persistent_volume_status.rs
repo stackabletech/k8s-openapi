@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PersistentVolumeStatus
 
 /// PersistentVolumeStatus is the current status of a persistent volume.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PersistentVolumeStatus {
     /// A human-readable message indicating details about why the volume is in this state.
     pub message: Option<String>,
@@ -13,6 +13,7 @@ pub struct PersistentVolumeStatus {
     /// Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
     pub reason: Option<String>,
 }
+
 
 impl crate::DeepMerge for PersistentVolumeStatus {
     fn merge_from(&mut self, other: Self) {

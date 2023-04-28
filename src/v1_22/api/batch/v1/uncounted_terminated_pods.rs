@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.UncountedTerminatedPods
 
 /// UncountedTerminatedPods holds UIDs of Pods that have terminated but haven't been accounted in Job status counters.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct UncountedTerminatedPods {
     /// Failed holds UIDs of failed Pods.
     pub failed: Option<Vec<String>>,
@@ -9,6 +9,7 @@ pub struct UncountedTerminatedPods {
     /// Succeeded holds UIDs of succeeded Pods.
     pub succeeded: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for UncountedTerminatedPods {
     fn merge_from(&mut self, other: Self) {

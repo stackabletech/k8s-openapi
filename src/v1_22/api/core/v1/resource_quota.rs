@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ResourceQuota
 
 /// ResourceQuota sets aggregate quota restrictions enforced per namespace
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ResourceQuota {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct ResourceQuota {
     /// Status defines the actual enforced quota and its current usage. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub status: Option<crate::api::core::v1::ResourceQuotaStatus>,
 }
+
 
 // Begin /v1/ResourceQuota
 

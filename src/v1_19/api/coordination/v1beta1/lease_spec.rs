@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.coordination.v1beta1.LeaseSpec
 
 /// LeaseSpec is a specification of a Lease.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LeaseSpec {
     /// acquireTime is a time when the current lease was acquired.
     pub acquire_time: Option<crate::apimachinery::pkg::apis::meta::v1::MicroTime>,
@@ -18,6 +18,7 @@ pub struct LeaseSpec {
     /// renewTime is a time when the current holder of a lease has last updated the lease.
     pub renew_time: Option<crate::apimachinery::pkg::apis::meta::v1::MicroTime>,
 }
+
 
 impl crate::DeepMerge for LeaseSpec {
     fn merge_from(&mut self, other: Self) {

@@ -1,12 +1,13 @@
 // Generated from definition io.k8s.api.settings.v1alpha1.PodPreset
 
 /// PodPreset is a policy resource that defines additional runtime requirements for a Pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodPreset {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
     pub spec: Option<crate::api::settings::v1alpha1::PodPresetSpec>,
 }
+
 
 // Begin settings.k8s.io/v1alpha1/PodPreset
 

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceSubresources
 
 /// CustomResourceSubresources defines the status and scale subresources for CustomResources.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CustomResourceSubresources {
     /// scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.
     pub scale: Option<crate::apiextensions_apiserver::pkg::apis::apiextensions::v1beta1::CustomResourceSubresourceScale>,
@@ -9,6 +9,7 @@ pub struct CustomResourceSubresources {
     /// status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.
     pub status: Option<crate::apiextensions_apiserver::pkg::apis::apiextensions::v1beta1::CustomResourceSubresourceStatus>,
 }
+
 
 impl crate::DeepMerge for CustomResourceSubresources {
     fn merge_from(&mut self, other: Self) {

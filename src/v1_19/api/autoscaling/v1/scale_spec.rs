@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.autoscaling.v1.ScaleSpec
 
 /// ScaleSpec describes the attributes of a scale subresource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ScaleSpec {
     /// desired number of instances for the scaled object.
     pub replicas: Option<i32>,
 }
+
 
 impl crate::DeepMerge for ScaleSpec {
     fn merge_from(&mut self, other: Self) {

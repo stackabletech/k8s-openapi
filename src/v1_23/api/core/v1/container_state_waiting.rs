@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ContainerStateWaiting
 
 /// ContainerStateWaiting is a waiting state of a container.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ContainerStateWaiting {
     /// Message regarding why the container is not yet running.
     pub message: Option<String>,
@@ -9,6 +9,7 @@ pub struct ContainerStateWaiting {
     /// (brief) reason the container is not yet running.
     pub reason: Option<String>,
 }
+
 
 impl crate::DeepMerge for ContainerStateWaiting {
     fn merge_from(&mut self, other: Self) {

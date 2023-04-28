@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1.NetworkPolicySpec
 
 /// NetworkPolicySpec provides the specification of a NetworkPolicy
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NetworkPolicySpec {
     /// List of egress rules to be applied to the selected pods. Outgoing traffic is allowed if there are no NetworkPolicies selecting the pod (and cluster policy otherwise allows the traffic), OR if the traffic matches at least one egress rule across all of the NetworkPolicy objects whose podSelector matches the pod. If this field is empty then this NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the pods it selects are isolated by default). This field is beta-level in 1.8
     pub egress: Option<Vec<crate::api::networking::v1::NetworkPolicyEgressRule>>,
@@ -15,6 +15,7 @@ pub struct NetworkPolicySpec {
     /// List of rule types that the NetworkPolicy relates to. Valid options are "Ingress", "Egress", or "Ingress,Egress". If this field is not specified, it will default based on the existence of Ingress or Egress rules; policies that contain an Egress section are assumed to affect Egress, and all policies (whether or not they contain an Ingress section) are assumed to affect Ingress. If you want to write an egress-only policy, you must explicitly specify policyTypes \[ "Egress" \]. Likewise, if you want to write a policy that specifies that no egress is allowed, you must specify a policyTypes value that include "Egress" (since such a policy would not include an Egress section and would otherwise default to just \[ "Ingress" \]). This field is beta-level in 1.8
     pub policy_types: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for NetworkPolicySpec {
     fn merge_from(&mut self, other: Self) {

@@ -7,7 +7,7 @@
 ///  * If Type is Deleted: the state of the object immediately before deletion.
 ///  * If Type is Error: *Status is recommended; other types may make sense
 ///    depending on context.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, value_size::Size)]
 pub enum WatchEvent<T> {
     Added(T),
     Deleted(T),

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1.IngressSpec
 
 /// IngressSpec describes the Ingress the user wishes to exist.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct IngressSpec {
     /// DefaultBackend is the backend that should handle requests that don't match any rule. If Rules are not specified, DefaultBackend must be specified. If DefaultBackend is not set, the handling of requests that do not match any of the rules will be up to the Ingress controller.
     pub default_backend: Option<crate::api::networking::v1::IngressBackend>,
@@ -15,6 +15,7 @@ pub struct IngressSpec {
     /// TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.
     pub tls: Option<Vec<crate::api::networking::v1::IngressTLS>>,
 }
+
 
 impl crate::DeepMerge for IngressSpec {
     fn merge_from(&mut self, other: Self) {

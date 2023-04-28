@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.FSGroupStrategyOptions
 
 /// FSGroupStrategyOptions defines the strategy type and options used to create the strategy.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct FSGroupStrategyOptions {
     /// ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
     pub ranges: Option<Vec<crate::api::policy::v1beta1::IDRange>>,
@@ -9,6 +9,7 @@ pub struct FSGroupStrategyOptions {
     /// rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
     pub rule: Option<String>,
 }
+
 
 impl crate::DeepMerge for FSGroupStrategyOptions {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PersistentVolumeSpec
 
 /// PersistentVolumeSpec is the specification of a persistent volume.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PersistentVolumeSpec {
     /// accessModes contains all ways the volume can be mounted. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes
     pub access_modes: Option<Vec<String>>,
@@ -94,6 +94,7 @@ pub struct PersistentVolumeSpec {
     /// vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
     pub vsphere_volume: Option<crate::api::core::v1::VsphereVirtualDiskVolumeSource>,
 }
+
 
 impl crate::DeepMerge for PersistentVolumeSpec {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Taint
 
 /// The node this Taint is attached to has the "effect" on any pod that does not tolerate the Taint.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Taint {
     /// Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
     ///
@@ -16,6 +16,7 @@ pub struct Taint {
     /// The taint value corresponding to the taint key.
     pub value: Option<String>,
 }
+
 
 impl crate::DeepMerge for Taint {
     fn merge_from(&mut self, other: Self) {

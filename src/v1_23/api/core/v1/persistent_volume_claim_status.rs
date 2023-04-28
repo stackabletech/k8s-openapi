@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PersistentVolumeClaimStatus
 
 /// PersistentVolumeClaimStatus is the current status of a persistent volume claim.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PersistentVolumeClaimStatus {
     /// AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
     pub access_modes: Option<Vec<String>>,
@@ -22,6 +22,7 @@ pub struct PersistentVolumeClaimStatus {
     /// ResizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
     pub resize_status: Option<String>,
 }
+
 
 impl crate::DeepMerge for PersistentVolumeClaimStatus {
     fn merge_from(&mut self, other: Self) {

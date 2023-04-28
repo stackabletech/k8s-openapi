@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NodeSystemInfo
 
 /// NodeSystemInfo is a set of ids/uuids to uniquely identify the node.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeSystemInfo {
     /// The Architecture reported by the node
     pub architecture: String,
@@ -33,6 +33,7 @@ pub struct NodeSystemInfo {
     /// SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
     pub system_uuid: String,
 }
+
 
 impl crate::DeepMerge for NodeSystemInfo {
     fn merge_from(&mut self, other: Self) {

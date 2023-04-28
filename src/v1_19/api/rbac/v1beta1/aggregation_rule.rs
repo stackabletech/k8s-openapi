@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.rbac.v1beta1.AggregationRule
 
 /// AggregationRule describes how to locate ClusterRoles to aggregate into the ClusterRole
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AggregationRule {
     /// ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole's permissions will be added
     pub cluster_role_selectors: Option<Vec<crate::apimachinery::pkg::apis::meta::v1::LabelSelector>>,
 }
+
 
 impl crate::DeepMerge for AggregationRule {
     fn merge_from(&mut self, other: Self) {

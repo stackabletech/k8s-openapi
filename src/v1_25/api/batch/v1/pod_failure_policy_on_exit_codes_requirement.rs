@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.PodFailurePolicyOnExitCodesRequirement
 
 /// PodFailurePolicyOnExitCodesRequirement describes the requirement for handling a failed pod based on its container exit codes. In particular, it lookups the .state.terminated.exitCode for each app container and init container status, represented by the .status.containerStatuses and .status.initContainerStatuses fields in the Pod status, respectively. Containers completed with success (exit code 0) are excluded from the requirement check.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodFailurePolicyOnExitCodesRequirement {
     /// Restricts the check for exit codes to the container with the specified name. When null, the rule applies to all containers. When specified, it should match one the container or initContainer names in the pod template.
     pub container_name: Option<String>,
@@ -19,6 +19,7 @@ pub struct PodFailurePolicyOnExitCodesRequirement {
     /// Specifies the set of values. Each returned container exit code (might be multiple in case of multiple containers) is checked against this set of values with respect to the operator. The list of values must be ordered and must not contain duplicates. Value '0' cannot be used for the In operator. At least one element is required. At most 255 elements are allowed.
     pub values: Vec<i32>,
 }
+
 
 impl crate::DeepMerge for PodFailurePolicyOnExitCodesRequirement {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.coordination.v1beta1.Lease
 
 /// Lease defines a lease concept.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Lease {
     /// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -9,6 +9,7 @@ pub struct Lease {
     /// Specification of the Lease. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub spec: Option<crate::api::coordination::v1beta1::LeaseSpec>,
 }
+
 
 // Begin coordination.k8s.io/v1beta1/Lease
 

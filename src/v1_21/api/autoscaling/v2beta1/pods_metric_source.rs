@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta1.PodsMetricSource
 
 /// PodsMetricSource indicates how to scale on a metric describing each pod in the current scale target (for example, transactions-processed-per-second). The values will be averaged together before being compared to the target value.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodsMetricSource {
     /// metricName is the name of the metric in question
     pub metric_name: String,
@@ -12,6 +12,7 @@ pub struct PodsMetricSource {
     /// targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity)
     pub target_average_value: crate::apimachinery::pkg::api::resource::Quantity,
 }
+
 
 impl crate::DeepMerge for PodsMetricSource {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.node.v1alpha1.RuntimeClassSpec
 
 /// RuntimeClassSpec is a specification of a RuntimeClass. It contains parameters that are required to describe the RuntimeClass to the Container Runtime Interface (CRI) implementation, as well as any other components that need to understand how the pod will be run. The RuntimeClassSpec is immutable.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct RuntimeClassSpec {
     /// Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes v1.15, and is only honored by servers that enable the PodOverhead feature.
     pub overhead: Option<crate::api::node::v1alpha1::Overhead>,
@@ -12,6 +12,7 @@ pub struct RuntimeClassSpec {
     /// Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.
     pub scheduling: Option<crate::api::node::v1alpha1::Scheduling>,
 }
+
 
 impl crate::DeepMerge for RuntimeClassSpec {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.rbac.v1alpha1.Subject
 
 /// Subject contains a reference to the object or user identities a role binding applies to.  This can either hold a direct API object reference, or a value for non-objects such as user and group names.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Subject {
     /// APIVersion holds the API group and version of the referenced subject. Defaults to "v1" for ServiceAccount subjects. Defaults to "rbac.authorization.k8s.io/v1alpha1" for User and Group subjects.
     pub api_version: Option<String>,
@@ -15,6 +15,7 @@ pub struct Subject {
     /// Namespace of the referenced object.  If the object kind is non-namespace, such as "User" or "Group", and this value is not empty the Authorizer should report an error.
     pub namespace: Option<String>,
 }
+
 
 impl crate::DeepMerge for Subject {
     fn merge_from(&mut self, other: Self) {

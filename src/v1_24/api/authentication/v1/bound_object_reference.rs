@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authentication.v1.BoundObjectReference
 
 /// BoundObjectReference is a reference to an object that a token is bound to.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct BoundObjectReference {
     /// API version of the referent.
     pub api_version: Option<String>,
@@ -15,6 +15,7 @@ pub struct BoundObjectReference {
     /// UID of the referent.
     pub uid: Option<String>,
 }
+
 
 impl crate::DeepMerge for BoundObjectReference {
     fn merge_from(&mut self, other: Self) {

@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.LimitRangeSpec
 
 /// LimitRangeSpec defines a min/max usage limit for resources that match on kind.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LimitRangeSpec {
     /// Limits is the list of LimitRangeItem objects that are enforced.
     pub limits: Vec<crate::api::core::v1::LimitRangeItem>,
 }
+
 
 impl crate::DeepMerge for LimitRangeSpec {
     fn merge_from(&mut self, other: Self) {

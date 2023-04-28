@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Affinity
 
 /// Affinity is a group of affinity scheduling rules.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Affinity {
     /// Describes node affinity scheduling rules for the pod.
     pub node_affinity: Option<crate::api::core::v1::NodeAffinity>,
@@ -12,6 +12,7 @@ pub struct Affinity {
     /// Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
     pub pod_anti_affinity: Option<crate::api::core::v1::PodAntiAffinity>,
 }
+
 
 impl crate::DeepMerge for Affinity {
     fn merge_from(&mut self, other: Self) {

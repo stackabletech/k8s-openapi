@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.extensions.v1beta1.IngressBackend
 
 /// IngressBackend describes all endpoints for a given service and port.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct IngressBackend {
     /// Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
     pub resource: Option<crate::api::core::v1::TypedLocalObjectReference>,
@@ -12,6 +12,7 @@ pub struct IngressBackend {
     /// Specifies the port of the referenced service.
     pub service_port: Option<crate::apimachinery::pkg::util::intstr::IntOrString>,
 }
+
 
 impl crate::DeepMerge for IngressBackend {
     fn merge_from(&mut self, other: Self) {

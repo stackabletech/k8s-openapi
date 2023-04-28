@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authorization.v1.ResourceRule
 
 /// ResourceRule is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ResourceRule {
     /// APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.  "*" means all.
     pub api_groups: Option<Vec<String>>,
@@ -16,6 +16,7 @@ pub struct ResourceRule {
     /// Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.
     pub verbs: Vec<String>,
 }
+
 
 impl crate::DeepMerge for ResourceRule {
     fn merge_from(&mut self, other: Self) {

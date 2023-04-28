@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.JSONSchemaProps
 
 /// JSONSchemaProps is a JSON-Schema following Specification Draft 4 (http://json-schema.org/).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct JSONSchemaProps {
     pub ref_path: Option<String>,
 
@@ -132,6 +132,7 @@ pub struct JSONSchemaProps {
     /// x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to normal pruning behaviour if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.
     pub x_kubernetes_preserve_unknown_fields: Option<bool>,
 }
+
 
 impl crate::DeepMerge for JSONSchemaProps {
     fn merge_from(&mut self, other: Self) {

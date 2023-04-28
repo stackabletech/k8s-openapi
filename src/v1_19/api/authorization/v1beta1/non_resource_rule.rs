@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authorization.v1beta1.NonResourceRule
 
 /// NonResourceRule holds information that describes a rule for the non-resource
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NonResourceRule {
     /// NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.
     pub non_resource_urls: Option<Vec<String>>,
@@ -9,6 +9,7 @@ pub struct NonResourceRule {
     /// Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.
     pub verbs: Vec<String>,
 }
+
 
 impl crate::DeepMerge for NonResourceRule {
     fn merge_from(&mut self, other: Self) {

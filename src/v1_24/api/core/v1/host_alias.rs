@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.HostAlias
 
 /// HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HostAlias {
     /// Hostnames for the above IP address.
     pub hostnames: Option<Vec<String>>,
@@ -9,6 +9,7 @@ pub struct HostAlias {
     /// IP address of the host file entry.
     pub ip: Option<String>,
 }
+
 
 impl crate::DeepMerge for HostAlias {
     fn merge_from(&mut self, other: Self) {

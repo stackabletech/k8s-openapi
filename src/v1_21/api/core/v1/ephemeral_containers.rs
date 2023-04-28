@@ -1,13 +1,14 @@
 // Generated from definition io.k8s.api.core.v1.EphemeralContainers
 
 /// A list of ephemeral containers used with the Pod ephemeralcontainers subresource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EphemeralContainers {
     /// A list of ephemeral containers associated with this pod. New ephemeral containers may be appended to this list, but existing ephemeral containers may not be removed or modified.
     pub ephemeral_containers: Vec<crate::api::core::v1::EphemeralContainer>,
 
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 }
+
 
 // Begin /v1/EphemeralContainers
 

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta
 
 /// ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ObjectMeta {
     /// Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
     pub annotations: Option<std::collections::BTreeMap<String, String>>,
@@ -62,6 +62,7 @@ pub struct ObjectMeta {
     /// Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
     pub uid: Option<String>,
 }
+
 
 impl crate::DeepMerge for ObjectMeta {
     fn merge_from(&mut self, other: Self) {

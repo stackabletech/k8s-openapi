@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.StatefulSetPersistentVolumeClaimRetentionPolicy
 
 /// StatefulSetPersistentVolumeClaimRetentionPolicy describes the policy used for PVCs created from the StatefulSet VolumeClaimTemplates.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StatefulSetPersistentVolumeClaimRetentionPolicy {
     /// WhenDeleted specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is deleted. The default policy of `Retain` causes PVCs to not be affected by StatefulSet deletion. The `Delete` policy causes those PVCs to be deleted.
     pub when_deleted: Option<String>,
@@ -9,6 +9,7 @@ pub struct StatefulSetPersistentVolumeClaimRetentionPolicy {
     /// WhenScaled specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is scaled down. The default policy of `Retain` causes PVCs to not be affected by a scaledown. The `Delete` policy causes the associated PVCs for any excess pods above the replica count to be deleted.
     pub when_scaled: Option<String>,
 }
+
 
 impl crate::DeepMerge for StatefulSetPersistentVolumeClaimRetentionPolicy {
     fn merge_from(&mut self, other: Self) {

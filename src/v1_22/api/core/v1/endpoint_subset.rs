@@ -8,7 +8,7 @@
 /// The resulting set of endpoints can be viewed as:
 ///     a: \[ 10.10.1.1:8675, 10.10.2.2:8675 \],
 ///     b: \[ 10.10.1.1:309, 10.10.2.2:309 \]
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EndpointSubset {
     /// IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
     pub addresses: Option<Vec<crate::api::core::v1::EndpointAddress>>,
@@ -19,6 +19,7 @@ pub struct EndpointSubset {
     /// Port numbers available on the related IP addresses.
     pub ports: Option<Vec<crate::api::core::v1::EndpointPort>>,
 }
+
 
 impl crate::DeepMerge for EndpointSubset {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.CronJobSpec
 
 /// CronJobSpec describes how the job execution will look like and when it will actually run.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CronJobSpec {
     /// Specifies how to treat concurrent executions of a Job. Valid values are: - "Allow" (default): allows CronJobs to run concurrently; - "Forbid": forbids concurrent runs, skipping next run if previous run hasn't finished yet; - "Replace": cancels currently running job and replaces it with a new one
     ///
@@ -28,6 +28,7 @@ pub struct CronJobSpec {
     /// The time zone for the given schedule, see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. If not specified, this will rely on the time zone of the kube-controller-manager process. ALPHA: This field is in alpha and must be enabled via the `CronJobTimeZone` feature gate.
     pub time_zone: Option<String>,
 }
+
 
 impl crate::DeepMerge for CronJobSpec {
     fn merge_from(&mut self, other: Self) {

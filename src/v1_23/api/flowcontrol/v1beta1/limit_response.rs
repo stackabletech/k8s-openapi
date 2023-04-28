@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1beta1.LimitResponse
 
 /// LimitResponse defines how to handle requests that can not be executed right now.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LimitResponse {
     /// `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`.
     pub queuing: Option<crate::api::flowcontrol::v1beta1::QueuingConfiguration>,
@@ -9,6 +9,7 @@ pub struct LimitResponse {
     /// `type` is "Queue" or "Reject". "Queue" means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. "Reject" means that requests that can not be executed upon arrival are rejected. Required.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for LimitResponse {
     fn merge_from(&mut self, other: Self) {

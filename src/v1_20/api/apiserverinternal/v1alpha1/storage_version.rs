@@ -2,7 +2,7 @@
 
 ///
 ///  Storage version of a specific resource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StorageVersion {
     /// The name is \<group\>.\<resource\>.
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -13,6 +13,7 @@ pub struct StorageVersion {
     /// API server instances report the version they can decode and the version they encode objects to when persisting objects in the backend.
     pub status: crate::api::apiserverinternal::v1alpha1::StorageVersionStatus,
 }
+
 
 // Begin internal.apiserver.k8s.io/v1alpha1/StorageVersion
 

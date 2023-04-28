@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.LoadBalancerIngress
 
 /// LoadBalancerIngress represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LoadBalancerIngress {
     /// Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
     pub hostname: Option<String>,
@@ -12,6 +12,7 @@ pub struct LoadBalancerIngress {
     /// Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
     pub ports: Option<Vec<crate::api::core::v1::PortStatus>>,
 }
+
 
 impl crate::DeepMerge for LoadBalancerIngress {
     fn merge_from(&mut self, other: Self) {

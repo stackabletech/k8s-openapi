@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ConfigMapKeySelector
 
 /// Selects a key from a ConfigMap.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ConfigMapKeySelector {
     /// The key to select.
     pub key: String,
@@ -12,6 +12,7 @@ pub struct ConfigMapKeySelector {
     /// Specify whether the ConfigMap or its key must be defined
     pub optional: Option<bool>,
 }
+
 
 impl crate::DeepMerge for ConfigMapKeySelector {
     fn merge_from(&mut self, other: Self) {

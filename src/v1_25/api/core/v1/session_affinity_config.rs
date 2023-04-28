@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.SessionAffinityConfig
 
 /// SessionAffinityConfig represents the configurations of session affinity.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SessionAffinityConfig {
     /// clientIP contains the configurations of Client IP based session affinity.
     pub client_ip: Option<crate::api::core::v1::ClientIPConfig>,
 }
+
 
 impl crate::DeepMerge for SessionAffinityConfig {
     fn merge_from(&mut self, other: Self) {

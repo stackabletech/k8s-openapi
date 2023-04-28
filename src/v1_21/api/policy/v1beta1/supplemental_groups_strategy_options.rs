@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.SupplementalGroupsStrategyOptions
 
 /// SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SupplementalGroupsStrategyOptions {
     /// ranges are the allowed ranges of supplemental groups.  If you would like to force a single supplemental group then supply a single range with the same start and end. Required for MustRunAs.
     pub ranges: Option<Vec<crate::api::policy::v1beta1::IDRange>>,
@@ -9,6 +9,7 @@ pub struct SupplementalGroupsStrategyOptions {
     /// rule is the strategy that will dictate what supplemental groups is used in the SecurityContext.
     pub rule: Option<String>,
 }
+
 
 impl crate::DeepMerge for SupplementalGroupsStrategyOptions {
     fn merge_from(&mut self, other: Self) {

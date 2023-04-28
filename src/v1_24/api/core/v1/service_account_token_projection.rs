@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ServiceAccountTokenProjection
 
 /// ServiceAccountTokenProjection represents a projected service account token volume. This projection can be used to insert a service account token into the pods runtime filesystem for use against APIs (Kubernetes API Server or otherwise).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServiceAccountTokenProjection {
     /// audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
     pub audience: Option<String>,
@@ -12,6 +12,7 @@ pub struct ServiceAccountTokenProjection {
     /// path is the path relative to the mount point of the file to project the token into.
     pub path: String,
 }
+
 
 impl crate::DeepMerge for ServiceAccountTokenProjection {
     fn merge_from(&mut self, other: Self) {

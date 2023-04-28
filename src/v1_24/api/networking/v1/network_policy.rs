@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1.NetworkPolicy
 
 /// NetworkPolicy describes what network traffic is allowed for a set of Pods
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NetworkPolicy {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct NetworkPolicy {
     /// Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub status: Option<crate::api::networking::v1::NetworkPolicyStatus>,
 }
+
 
 // Begin networking.k8s.io/v1/NetworkPolicy
 

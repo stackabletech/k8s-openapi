@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PodStatus
 
 /// PodStatus represents information about the status of a pod. Status may trail the actual state of a system, especially if the node that hosts the pod cannot contact the control plane.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodStatus {
     /// Current service state of pod. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
     pub conditions: Option<Vec<crate::api::core::v1::PodCondition>>,
@@ -46,6 +46,7 @@ pub struct PodStatus {
     /// RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before the Kubelet pulled the container image(s) for the pod.
     pub start_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
 }
+
 
 impl crate::DeepMerge for PodStatus {
     fn merge_from(&mut self, other: Self) {

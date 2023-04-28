@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Toleration
 
 /// The pod this Toleration is attached to tolerates any taint that matches the triple \<key,value,effect\> using the matching operator \<operator\>.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Toleration {
     /// Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
     ///
@@ -20,6 +20,7 @@ pub struct Toleration {
     /// Value is the taint value the toleration matches to. If the operator is Exists, the value should be empty, otherwise just a regular string.
     pub value: Option<String>,
 }
+
 
 impl crate::DeepMerge for Toleration {
     fn merge_from(&mut self, other: Self) {

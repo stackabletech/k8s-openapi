@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.DownwardAPIVolumeFile
 
 /// DownwardAPIVolumeFile represents information to create the file containing the pod field
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DownwardAPIVolumeFile {
     /// Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.
     pub field_ref: Option<crate::api::core::v1::ObjectFieldSelector>,
@@ -15,6 +15,7 @@ pub struct DownwardAPIVolumeFile {
     /// Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.
     pub resource_field_ref: Option<crate::api::core::v1::ResourceFieldSelector>,
 }
+
 
 impl crate::DeepMerge for DownwardAPIVolumeFile {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authorization.v1.SelfSubjectAccessReview
 
 /// SelfSubjectAccessReview checks whether or the current user can perform an action.  Not filling in a spec.namespace means "in all namespaces".  Self is a special case, because users should always be able to check whether they can perform an action
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SelfSubjectAccessReview {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
@@ -11,6 +11,7 @@ pub struct SelfSubjectAccessReview {
     /// Status is filled in by the server and indicates whether the request is allowed or not
     pub status: Option<crate::api::authorization::v1::SubjectAccessReviewStatus>,
 }
+
 
 // Begin authorization.k8s.io/v1/SelfSubjectAccessReview
 

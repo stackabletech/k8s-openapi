@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.DeploymentStrategy
 
 /// DeploymentStrategy describes how to replace existing pods with new ones.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DeploymentStrategy {
     /// Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
     pub rolling_update: Option<crate::api::apps::v1::RollingUpdateDeployment>,
@@ -10,6 +10,7 @@ pub struct DeploymentStrategy {
     ///
     pub type_: Option<String>,
 }
+
 
 impl crate::DeepMerge for DeploymentStrategy {
     fn merge_from(&mut self, other: Self) {

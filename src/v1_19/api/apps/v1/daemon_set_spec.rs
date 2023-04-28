@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.DaemonSetSpec
 
 /// DaemonSetSpec is the specification of a daemon set.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DaemonSetSpec {
     /// The minimum number of seconds for which a newly created DaemonSet pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready).
     pub min_ready_seconds: Option<i32>,
@@ -18,6 +18,7 @@ pub struct DaemonSetSpec {
     /// An update strategy to replace existing DaemonSet pods with new pods.
     pub update_strategy: Option<crate::api::apps::v1::DaemonSetUpdateStrategy>,
 }
+
 
 impl crate::DeepMerge for DaemonSetSpec {
     fn merge_from(&mut self, other: Self) {

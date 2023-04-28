@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.ReplicaSetStatus
 
 /// ReplicaSetStatus represents the current status of a ReplicaSet.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ReplicaSetStatus {
     /// The number of available replicas (ready for at least minReadySeconds) for this replica set.
     pub available_replicas: Option<i32>,
@@ -21,6 +21,7 @@ pub struct ReplicaSetStatus {
     /// Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
     pub replicas: i32,
 }
+
 
 impl crate::DeepMerge for ReplicaSetStatus {
     fn merge_from(&mut self, other: Self) {

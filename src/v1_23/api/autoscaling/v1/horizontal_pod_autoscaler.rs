@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v1.HorizontalPodAutoscaler
 
 /// configuration of a horizontal pod autoscaler.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HorizontalPodAutoscaler {
     /// Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct HorizontalPodAutoscaler {
     /// current information about the autoscaler.
     pub status: Option<crate::api::autoscaling::v1::HorizontalPodAutoscalerStatus>,
 }
+
 
 // Begin autoscaling/v1/HorizontalPodAutoscaler
 

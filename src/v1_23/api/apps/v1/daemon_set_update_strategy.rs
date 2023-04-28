@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.DaemonSetUpdateStrategy
 
 /// DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DaemonSetUpdateStrategy {
     /// Rolling update config params. Present only if type = "RollingUpdate".
     pub rolling_update: Option<crate::api::apps::v1::RollingUpdateDaemonSet>,
@@ -10,6 +10,7 @@ pub struct DaemonSetUpdateStrategy {
     ///
     pub type_: Option<String>,
 }
+
 
 impl crate::DeepMerge for DaemonSetUpdateStrategy {
     fn merge_from(&mut self, other: Self) {

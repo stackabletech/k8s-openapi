@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.NodeDaemonEndpoints
 
 /// NodeDaemonEndpoints lists ports opened by daemons running on the Node.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeDaemonEndpoints {
     /// Endpoint on which Kubelet is listening.
     pub kubelet_endpoint: Option<crate::api::core::v1::DaemonEndpoint>,
 }
+
 
 impl crate::DeepMerge for NodeDaemonEndpoints {
     fn merge_from(&mut self, other: Self) {

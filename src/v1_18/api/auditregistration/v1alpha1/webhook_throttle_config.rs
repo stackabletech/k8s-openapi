@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.auditregistration.v1alpha1.WebhookThrottleConfig
 
 /// WebhookThrottleConfig holds the configuration for throttling events
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct WebhookThrottleConfig {
     /// ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
     pub burst: Option<i64>,
@@ -9,6 +9,7 @@ pub struct WebhookThrottleConfig {
     /// ThrottleQPS maximum number of batches per second default 10 QPS
     pub qps: Option<i64>,
 }
+
 
 impl crate::DeepMerge for WebhookThrottleConfig {
     fn merge_from(&mut self, other: Self) {

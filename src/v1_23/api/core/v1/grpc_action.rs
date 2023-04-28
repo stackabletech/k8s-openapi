@@ -1,6 +1,6 @@
 // Generated from definition io.k8s.api.core.v1.GRPCAction
 
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct GRPCAction {
     /// Port number of the gRPC service. Number must be in the range 1 to 65535.
     pub port: i32,
@@ -10,6 +10,7 @@ pub struct GRPCAction {
     /// If this is not specified, the default behavior is defined by gRPC.
     pub service: Option<String>,
 }
+
 
 impl crate::DeepMerge for GRPCAction {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PodTemplateSpec
 
 /// PodTemplateSpec describes the data a pod should have when created from a template
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodTemplateSpec {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: Option<crate::apimachinery::pkg::apis::meta::v1::ObjectMeta>,
@@ -9,6 +9,7 @@ pub struct PodTemplateSpec {
     /// Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub spec: Option<crate::api::core::v1::PodSpec>,
 }
+
 
 impl crate::DeepMerge for PodTemplateSpec {
     fn merge_from(&mut self, other: Self) {

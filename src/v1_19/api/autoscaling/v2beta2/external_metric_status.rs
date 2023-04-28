@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta2.ExternalMetricStatus
 
 /// ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ExternalMetricStatus {
     /// current contains the current value for the given metric
     pub current: crate::api::autoscaling::v2beta2::MetricValueStatus,
@@ -9,6 +9,7 @@ pub struct ExternalMetricStatus {
     /// metric identifies the target metric by name and selector
     pub metric: crate::api::autoscaling::v2beta2::MetricIdentifier,
 }
+
 
 impl crate::DeepMerge for ExternalMetricStatus {
     fn merge_from(&mut self, other: Self) {

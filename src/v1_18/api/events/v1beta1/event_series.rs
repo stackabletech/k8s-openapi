@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.events.v1beta1.EventSeries
 
 /// EventSeries contain information on series of events, i.e. thing that was/is happening continuously for some time.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, value_size::Size)]
 pub struct EventSeries {
     /// Number of occurrences in this series up to the last heartbeat time
     pub count: i32,
@@ -12,6 +12,7 @@ pub struct EventSeries {
     /// Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
     pub state: String,
 }
+
 
 impl crate::DeepMerge for EventSeries {
     fn merge_from(&mut self, other: Self) {

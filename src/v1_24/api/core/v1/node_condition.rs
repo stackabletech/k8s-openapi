@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NodeCondition
 
 /// NodeCondition contains condition information for a node.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeCondition {
     /// Last time we got an update on a given condition.
     pub last_heartbeat_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -21,6 +21,7 @@ pub struct NodeCondition {
     /// Type of node condition.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for NodeCondition {
     fn merge_from(&mut self, other: Self) {

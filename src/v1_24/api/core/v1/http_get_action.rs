@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.HTTPGetAction
 
 /// HTTPGetAction describes an action based on HTTP Get requests.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HTTPGetAction {
     /// Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
     pub host: Option<String>,
@@ -19,6 +19,7 @@ pub struct HTTPGetAction {
     ///
     pub scheme: Option<String>,
 }
+
 
 impl crate::DeepMerge for HTTPGetAction {
     fn merge_from(&mut self, other: Self) {

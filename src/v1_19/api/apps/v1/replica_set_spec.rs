@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.ReplicaSetSpec
 
 /// ReplicaSetSpec is the specification of a ReplicaSet.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ReplicaSetSpec {
     /// Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
     pub min_ready_seconds: Option<i32>,
@@ -15,6 +15,7 @@ pub struct ReplicaSetSpec {
     /// Template is the object that describes the pod that will be created if insufficient replicas are detected. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
     pub template: Option<crate::api::core::v1::PodTemplateSpec>,
 }
+
 
 impl crate::DeepMerge for ReplicaSetSpec {
     fn merge_from(&mut self, other: Self) {

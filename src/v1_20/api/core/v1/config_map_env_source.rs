@@ -3,7 +3,7 @@
 /// ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.
 ///
 /// The contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ConfigMapEnvSource {
     /// Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     pub name: Option<String>,
@@ -11,6 +11,7 @@ pub struct ConfigMapEnvSource {
     /// Specify whether the ConfigMap must be defined
     pub optional: Option<bool>,
 }
+
 
 impl crate::DeepMerge for ConfigMapEnvSource {
     fn merge_from(&mut self, other: Self) {

@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.node.v1alpha1.Overhead
 
 /// Overhead structure represents the resource overhead associated with running a pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Overhead {
     /// PodFixed represents the fixed resource overhead associated with running a pod.
     pub pod_fixed: Option<std::collections::BTreeMap<String, crate::apimachinery::pkg::api::resource::Quantity>>,
 }
+
 
 impl crate::DeepMerge for Overhead {
     fn merge_from(&mut self, other: Self) {

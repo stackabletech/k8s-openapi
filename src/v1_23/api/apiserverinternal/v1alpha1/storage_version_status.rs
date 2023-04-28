@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apiserverinternal.v1alpha1.StorageVersionStatus
 
 /// API server instances report the versions they can decode and the version they encode objects to when persisting objects in the backend.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StorageVersionStatus {
     /// If all API server instances agree on the same encoding storage version, then this field is set to that version. Otherwise this field is left empty. API servers should finish updating its storageVersionStatus entry before serving write operations, so that this field will be in sync with the reality.
     pub common_encoding_version: Option<String>,
@@ -12,6 +12,7 @@ pub struct StorageVersionStatus {
     /// The reported versions per API server instance.
     pub storage_versions: Option<Vec<crate::api::apiserverinternal::v1alpha1::ServerStorageVersion>>,
 }
+
 
 impl crate::DeepMerge for StorageVersionStatus {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.HostPortRange
 
 /// HostPortRange defines a range of host ports that will be enabled by a policy for pods to use.  It requires both the start and end to be defined.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HostPortRange {
     /// max is the end of the range, inclusive.
     pub max: i32,
@@ -9,6 +9,7 @@ pub struct HostPortRange {
     /// min is the start of the range, inclusive.
     pub min: i32,
 }
+
 
 impl crate::DeepMerge for HostPortRange {
     fn merge_from(&mut self, other: Self) {

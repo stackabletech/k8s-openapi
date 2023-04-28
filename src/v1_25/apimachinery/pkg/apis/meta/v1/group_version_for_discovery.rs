@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery
 
 /// GroupVersion contains the "group/version" and "version" string of a version. It is made a struct to keep extensibility.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct GroupVersionForDiscovery {
     /// groupVersion specifies the API group and version in the form "group/version"
     pub group_version: String,
@@ -9,6 +9,7 @@ pub struct GroupVersionForDiscovery {
     /// version specifies the version in the form of "version". This is to save the clients the trouble of splitting the GroupVersion.
     pub version: String,
 }
+
 
 impl crate::DeepMerge for GroupVersionForDiscovery {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.SELinuxOptions
 
 /// SELinuxOptions are the labels to be applied to the container
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SELinuxOptions {
     /// Level is SELinux level label that applies to the container.
     pub level: Option<String>,
@@ -15,6 +15,7 @@ pub struct SELinuxOptions {
     /// User is a SELinux user label that applies to the container.
     pub user: Option<String>,
 }
+
 
 impl crate::DeepMerge for SELinuxOptions {
     fn merge_from(&mut self, other: Self) {

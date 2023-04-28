@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1beta1.FlowSchema
 
 /// FlowSchema defines the schema of a group of flows. Note that a flow is made up of a set of inbound API requests with similar attributes and is identified by a pair of strings: the name of the FlowSchema and a "flow distinguisher".
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct FlowSchema {
     /// `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct FlowSchema {
     /// `status` is the current status of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub status: Option<crate::api::flowcontrol::v1beta1::FlowSchemaStatus>,
 }
+
 
 // Begin flowcontrol.apiserver.k8s.io/v1beta1/FlowSchema
 

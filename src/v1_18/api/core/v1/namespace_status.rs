@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NamespaceStatus
 
 /// NamespaceStatus is information about the current status of a Namespace.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NamespaceStatus {
     /// Represents the latest available observations of a namespace's current state.
     pub conditions: Option<Vec<crate::api::core::v1::NamespaceCondition>>,
@@ -9,6 +9,7 @@ pub struct NamespaceStatus {
     /// Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
     pub phase: Option<String>,
 }
+
 
 impl crate::DeepMerge for NamespaceStatus {
     fn merge_from(&mut self, other: Self) {

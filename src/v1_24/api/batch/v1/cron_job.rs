@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.CronJob
 
 /// CronJob represents the configuration of a single cron job.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CronJob {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct CronJob {
     /// Current status of a cron job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub status: Option<crate::api::batch::v1::CronJobStatus>,
 }
+
 
 // Begin batch/v1/CronJob
 

@@ -2,7 +2,7 @@
 
 /// Common parameters for all patch operations.
 #[cfg(feature = "api")]
-#[derive(Clone, Copy, Debug, Default, PartialEq)]
+#[derive(Clone, Copy, Debug, Default, PartialEq, value_size::Size)]
 pub struct PatchOptional<'a> {
     /// When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
     pub dry_run: Option<&'a str>,
@@ -13,6 +13,7 @@ pub struct PatchOptional<'a> {
     /// Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
     pub force: Option<bool>,
 }
+
 
 #[cfg(feature = "api")]
 impl<'a> PatchOptional<'a> {

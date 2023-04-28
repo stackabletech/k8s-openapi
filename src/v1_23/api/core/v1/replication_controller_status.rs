@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ReplicationControllerStatus
 
 /// ReplicationControllerStatus represents the current status of a replication controller.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ReplicationControllerStatus {
     /// The number of available replicas (ready for at least minReadySeconds) for this replication controller.
     pub available_replicas: Option<i32>,
@@ -21,6 +21,7 @@ pub struct ReplicationControllerStatus {
     /// Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
     pub replicas: i32,
 }
+
 
 impl crate::DeepMerge for ReplicationControllerStatus {
     fn merge_from(&mut self, other: Self) {

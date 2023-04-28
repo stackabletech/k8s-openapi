@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinition
 
 /// CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format \<.spec.name\>.\<.spec.group\>.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CustomResourceDefinition {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
@@ -11,6 +11,7 @@ pub struct CustomResourceDefinition {
     /// status indicates the actual state of the CustomResourceDefinition
     pub status: Option<crate::apiextensions_apiserver::pkg::apis::apiextensions::v1::CustomResourceDefinitionStatus>,
 }
+
 
 // Begin apiextensions.k8s.io/v1/CustomResourceDefinition
 

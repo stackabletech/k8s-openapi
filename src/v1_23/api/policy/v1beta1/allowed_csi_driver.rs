@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.policy.v1beta1.AllowedCSIDriver
 
 /// AllowedCSIDriver represents a single inline CSI Driver that is allowed to be used.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AllowedCSIDriver {
     /// Name is the registered name of the CSI driver
     pub name: String,
 }
+
 
 impl crate::DeepMerge for AllowedCSIDriver {
     fn merge_from(&mut self, other: Self) {

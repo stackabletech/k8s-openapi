@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1beta2.FlowSchemaCondition
 
 /// FlowSchemaCondition describes conditions for a FlowSchema.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct FlowSchemaCondition {
     /// `lastTransitionTime` is the last time the condition transitioned from one status to another.
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -18,6 +18,7 @@ pub struct FlowSchemaCondition {
     /// `type` is the type of the condition. Required.
     pub type_: Option<String>,
 }
+
 
 impl crate::DeepMerge for FlowSchemaCondition {
     fn merge_from(&mut self, other: Self) {

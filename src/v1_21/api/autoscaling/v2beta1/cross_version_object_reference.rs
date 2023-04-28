@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta1.CrossVersionObjectReference
 
 /// CrossVersionObjectReference contains enough information to let you identify the referred resource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CrossVersionObjectReference {
     /// API version of the referent
     pub api_version: Option<String>,
@@ -12,6 +12,7 @@ pub struct CrossVersionObjectReference {
     /// Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
     pub name: String,
 }
+
 
 impl crate::DeepMerge for CrossVersionObjectReference {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NodeAddress
 
 /// NodeAddress contains information for the node's address.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeAddress {
     /// The node address.
     pub address: String,
@@ -9,6 +9,7 @@ pub struct NodeAddress {
     /// Node address type, one of Hostname, ExternalIP or InternalIP.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for NodeAddress {
     fn merge_from(&mut self, other: Self) {

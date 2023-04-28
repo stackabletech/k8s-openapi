@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.AzureFileVolumeSource
 
 /// AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AzureFileVolumeSource {
     /// readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
     pub read_only: Option<bool>,
@@ -12,6 +12,7 @@ pub struct AzureFileVolumeSource {
     /// shareName is the azure share Name
     pub share_name: String,
 }
+
 
 impl crate::DeepMerge for AzureFileVolumeSource {
     fn merge_from(&mut self, other: Self) {

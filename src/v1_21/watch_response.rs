@@ -2,7 +2,7 @@
 
 /// The common response type for all watch API operations.
 #[cfg(feature = "api")]
-#[derive(Debug)]
+#[derive(Debug, value_size::Size)]
 pub enum WatchResponse<T> where T: crate::serde::de::DeserializeOwned {
     Ok(crate::apimachinery::pkg::apis::meta::v1::WatchEvent<T>),
     Other(Result<Option<crate::serde_json::Value>, crate::serde_json::Error>),

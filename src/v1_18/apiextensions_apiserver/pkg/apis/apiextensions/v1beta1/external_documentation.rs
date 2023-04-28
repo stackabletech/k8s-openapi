@@ -1,12 +1,13 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.ExternalDocumentation
 
 /// ExternalDocumentation allows referencing an external resource for extended documentation.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ExternalDocumentation {
     pub description: Option<String>,
 
     pub url: Option<String>,
 }
+
 
 impl crate::DeepMerge for ExternalDocumentation {
     fn merge_from(&mut self, other: Self) {

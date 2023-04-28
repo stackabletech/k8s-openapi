@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.apps.v1.RollingUpdateStatefulSetStrategy
 
 /// RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct RollingUpdateStatefulSetStrategy {
     /// Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
     pub partition: Option<i32>,
 }
+
 
 impl crate::DeepMerge for RollingUpdateStatefulSetStrategy {
     fn merge_from(&mut self, other: Self) {

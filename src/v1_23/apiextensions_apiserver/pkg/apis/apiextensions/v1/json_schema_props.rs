@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.JSONSchemaProps
 
 /// JSONSchemaProps is a JSON-Schema following Specification Draft 4 (http://json-schema.org/).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct JSONSchemaProps {
     pub ref_path: Option<String>,
 
@@ -135,6 +135,7 @@ pub struct JSONSchemaProps {
     /// x-kubernetes-validations describes a list of validation rules written in the CEL expression language. This field is an alpha-level. Using this field requires the feature gate `CustomResourceValidationExpressions` to be enabled.
     pub x_kubernetes_validations: Option<Vec<crate::apiextensions_apiserver::pkg::apis::apiextensions::v1::ValidationRule>>,
 }
+
 
 impl crate::DeepMerge for JSONSchemaProps {
     fn merge_from(&mut self, other: Self) {

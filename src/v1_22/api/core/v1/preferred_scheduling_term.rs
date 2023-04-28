@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PreferredSchedulingTerm
 
 /// An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PreferredSchedulingTerm {
     /// A node selector term, associated with the corresponding weight.
     pub preference: crate::api::core::v1::NodeSelectorTerm,
@@ -9,6 +9,7 @@ pub struct PreferredSchedulingTerm {
     /// Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
     pub weight: i32,
 }
+
 
 impl crate::DeepMerge for PreferredSchedulingTerm {
     fn merge_from(&mut self, other: Self) {

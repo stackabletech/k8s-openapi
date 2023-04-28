@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ObjectFieldSelector
 
 /// ObjectFieldSelector selects an APIVersioned field of an object.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ObjectFieldSelector {
     /// Version of the schema the FieldPath is written in terms of, defaults to "v1".
     pub api_version: Option<String>,
@@ -9,6 +9,7 @@ pub struct ObjectFieldSelector {
     /// Path of the field to select in the specified API version.
     pub field_path: String,
 }
+
 
 impl crate::DeepMerge for ObjectFieldSelector {
     fn merge_from(&mut self, other: Self) {

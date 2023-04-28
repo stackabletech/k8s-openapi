@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Handler
 
 /// Handler defines a specific action that should be taken
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Handler {
     /// One and only one of the following should be specified. Exec specifies the action to take.
     pub exec: Option<crate::api::core::v1::ExecAction>,
@@ -12,6 +12,7 @@ pub struct Handler {
     /// TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
     pub tcp_socket: Option<crate::api::core::v1::TCPSocketAction>,
 }
+
 
 impl crate::DeepMerge for Handler {
     fn merge_from(&mut self, other: Self) {

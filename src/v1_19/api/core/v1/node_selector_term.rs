@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NodeSelectorTerm
 
 /// A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeSelectorTerm {
     /// A list of node selector requirements by node's labels.
     pub match_expressions: Option<Vec<crate::api::core::v1::NodeSelectorRequirement>>,
@@ -9,6 +9,7 @@ pub struct NodeSelectorTerm {
     /// A list of node selector requirements by node's fields.
     pub match_fields: Option<Vec<crate::api::core::v1::NodeSelectorRequirement>>,
 }
+
 
 impl crate::DeepMerge for NodeSelectorTerm {
     fn merge_from(&mut self, other: Self) {

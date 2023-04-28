@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.VolumeProjection
 
 /// Projection that may be projected along with other supported volume types
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VolumeProjection {
     /// information about the configMap data to project
     pub config_map: Option<crate::api::core::v1::ConfigMapProjection>,
@@ -15,6 +15,7 @@ pub struct VolumeProjection {
     /// information about the serviceAccountToken data to project
     pub service_account_token: Option<crate::api::core::v1::ServiceAccountTokenProjection>,
 }
+
 
 impl crate::DeepMerge for VolumeProjection {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1.IngressServiceBackend
 
 /// IngressServiceBackend references a Kubernetes Service as a Backend.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct IngressServiceBackend {
     /// Name is the referenced service. The service must exist in the same namespace as the Ingress object.
     pub name: String,
@@ -9,6 +9,7 @@ pub struct IngressServiceBackend {
     /// Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
     pub port: Option<crate::api::networking::v1::ServiceBackendPort>,
 }
+
 
 impl crate::DeepMerge for IngressServiceBackend {
     fn merge_from(&mut self, other: Self) {

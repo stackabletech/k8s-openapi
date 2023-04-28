@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Probe
 
 /// Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Probe {
     /// One and only one of the following should be specified. Exec specifies the action to take.
     pub exec: Option<crate::api::core::v1::ExecAction>,
@@ -27,6 +27,7 @@ pub struct Probe {
     /// Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     pub timeout_seconds: Option<i32>,
 }
+
 
 impl crate::DeepMerge for Probe {
     fn merge_from(&mut self, other: Self) {

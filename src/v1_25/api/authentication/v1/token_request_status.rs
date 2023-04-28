@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authentication.v1.TokenRequestStatus
 
 /// TokenRequestStatus is the result of a token request.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, value_size::Size)]
 pub struct TokenRequestStatus {
     /// ExpirationTimestamp is the time of expiration of the returned token.
     pub expiration_timestamp: crate::apimachinery::pkg::apis::meta::v1::Time,
@@ -9,6 +9,7 @@ pub struct TokenRequestStatus {
     /// Token is the opaque bearer token.
     pub token: String,
 }
+
 
 impl crate::DeepMerge for TokenRequestStatus {
     fn merge_from(&mut self, other: Self) {

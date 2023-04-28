@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.auditregistration.v1alpha1.Webhook
 
 /// Webhook holds the configuration of the webhook
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Webhook {
     /// ClientConfig holds the connection parameters for the webhook required
     pub client_config: crate::api::auditregistration::v1alpha1::WebhookClientConfig,
@@ -9,6 +9,7 @@ pub struct Webhook {
     /// Throttle holds the options for throttling the webhook
     pub throttle: Option<crate::api::auditregistration::v1alpha1::WebhookThrottleConfig>,
 }
+
 
 impl crate::DeepMerge for Webhook {
     fn merge_from(&mut self, other: Self) {

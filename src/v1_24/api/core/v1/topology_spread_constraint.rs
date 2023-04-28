@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.TopologySpreadConstraint
 
 /// TopologySpreadConstraint specifies how to spread matching pods among the given topology.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TopologySpreadConstraint {
     /// LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.
     pub label_selector: Option<crate::apimachinery::pkg::apis::meta::v1::LabelSelector>,
@@ -26,6 +26,7 @@ pub struct TopologySpreadConstraint {
     ///
     pub when_unsatisfiable: String,
 }
+
 
 impl crate::DeepMerge for TopologySpreadConstraint {
     fn merge_from(&mut self, other: Self) {

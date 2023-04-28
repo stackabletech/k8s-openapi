@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails
 
 /// StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StatusDetails {
     /// The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.
     pub causes: Option<Vec<crate::apimachinery::pkg::apis::meta::v1::StatusCause>>,
@@ -21,6 +21,7 @@ pub struct StatusDetails {
     /// UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids
     pub uid: Option<String>,
 }
+
 
 impl crate::DeepMerge for StatusDetails {
     fn merge_from(&mut self, other: Self) {

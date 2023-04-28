@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.certificates.v1.CertificateSigningRequestCondition
 
 /// CertificateSigningRequestCondition describes a condition of a CertificateSigningRequest object
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequestCondition {
     /// lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -31,6 +31,7 @@ pub struct CertificateSigningRequestCondition {
     /// Only one condition of a given type is allowed.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for CertificateSigningRequestCondition {
     fn merge_from(&mut self, other: Self) {

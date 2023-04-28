@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apiserverinternal.v1alpha1.ServerStorageVersion
 
 /// An API server instance reports the version it can decode and the version it encodes objects to when persisting objects in the backend.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServerStorageVersion {
     /// The ID of the reporting API server.
     pub api_server_id: Option<String>,
@@ -12,6 +12,7 @@ pub struct ServerStorageVersion {
     /// The API server encodes the object to this version when persisting it in the backend (e.g., etcd).
     pub encoding_version: Option<String>,
 }
+
 
 impl crate::DeepMerge for ServerStorageVersion {
     fn merge_from(&mut self, other: Self) {

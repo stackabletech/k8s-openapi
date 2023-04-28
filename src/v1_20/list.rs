@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.List
 
 /// List is a list of resources.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct List<T> where T: crate::ListableResource {
     /// List of objects.
     pub items: Vec<T>,
@@ -9,6 +9,7 @@ pub struct List<T> where T: crate::ListableResource {
     /// Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ListMeta,
 }
+
 
 impl<T> crate::Resource for List<T> where T: crate::ListableResource {
     const API_VERSION: &'static str = <T as crate::Resource>::API_VERSION;

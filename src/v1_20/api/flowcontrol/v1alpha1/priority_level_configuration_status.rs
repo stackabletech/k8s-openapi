@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.flowcontrol.v1alpha1.PriorityLevelConfigurationStatus
 
 /// PriorityLevelConfigurationStatus represents the current state of a "request-priority".
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PriorityLevelConfigurationStatus {
     /// `conditions` is the current state of "request-priority".
     pub conditions: Option<Vec<crate::api::flowcontrol::v1alpha1::PriorityLevelConfigurationCondition>>,
 }
+
 
 impl crate::DeepMerge for PriorityLevelConfigurationStatus {
     fn merge_from(&mut self, other: Self) {

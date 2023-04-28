@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1beta1.Subject
 
 /// Subject matches the originator of a request, as identified by the request authentication system. There are three ways of matching an originator; by user, group, or service account.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Subject {
     /// `group` matches based on user group name.
     pub group: Option<crate::api::flowcontrol::v1beta1::GroupSubject>,
@@ -15,6 +15,7 @@ pub struct Subject {
     /// `user` matches based on username.
     pub user: Option<crate::api::flowcontrol::v1beta1::UserSubject>,
 }
+
 
 impl crate::DeepMerge for Subject {
     fn merge_from(&mut self, other: Self) {

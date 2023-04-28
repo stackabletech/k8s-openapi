@@ -3,7 +3,7 @@
 /// StorageClass describes the parameters for a class of storage for which PersistentVolumes can be dynamically provisioned.
 ///
 /// StorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StorageClass {
     /// AllowVolumeExpansion shows whether the storage class allow volume expand
     pub allow_volume_expansion: Option<bool>,
@@ -29,6 +29,7 @@ pub struct StorageClass {
     /// VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
     pub volume_binding_mode: Option<String>,
 }
+
 
 // Begin storage.k8s.io/v1beta1/StorageClass
 

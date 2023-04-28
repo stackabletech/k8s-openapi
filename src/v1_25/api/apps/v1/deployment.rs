@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.Deployment
 
 /// Deployment enables declarative updates for Pods and ReplicaSets.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Deployment {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct Deployment {
     /// Most recently observed status of the Deployment.
     pub status: Option<crate::api::apps::v1::DeploymentStatus>,
 }
+
 
 // Begin apps/v1/Deployment
 

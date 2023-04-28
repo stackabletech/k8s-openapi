@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.certificates.v1beta1.CertificateSigningRequestSpec
 
 /// This information is immutable after the request is created. Only the Request and Usages fields can be set on creation, other fields are derived by Kubernetes and cannot be modified by users.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequestSpec {
     /// Extra information about the requesting user. See user.Info interface for details.
     pub extra: Option<std::collections::BTreeMap<String, Vec<String>>>,
@@ -55,6 +55,7 @@ pub struct CertificateSigningRequestSpec {
     /// Information about the requesting user. See user.Info interface for details.
     pub username: Option<String>,
 }
+
 
 impl crate::DeepMerge for CertificateSigningRequestSpec {
     fn merge_from(&mut self, other: Self) {

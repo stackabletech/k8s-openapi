@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.JobCondition
 
 /// JobCondition describes current state of a job.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct JobCondition {
     /// Last time the condition was checked.
     pub last_probe_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -21,6 +21,7 @@ pub struct JobCondition {
     /// Type of job condition, Complete or Failed.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for JobCondition {
     fn merge_from(&mut self, other: Self) {

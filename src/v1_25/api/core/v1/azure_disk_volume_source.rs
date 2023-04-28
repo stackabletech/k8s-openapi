@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.AzureDiskVolumeSource
 
 /// AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AzureDiskVolumeSource {
     /// cachingMode is the Host Caching mode: None, Read Only, Read Write.
     pub caching_mode: Option<String>,
@@ -21,6 +21,7 @@ pub struct AzureDiskVolumeSource {
     /// readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
     pub read_only: Option<bool>,
 }
+
 
 impl crate::DeepMerge for AzureDiskVolumeSource {
     fn merge_from(&mut self, other: Self) {

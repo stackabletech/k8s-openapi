@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource
 
 /// Represents a vSphere volume resource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VsphereVirtualDiskVolumeSource {
     /// Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
     pub fs_type: Option<String>,
@@ -15,6 +15,7 @@ pub struct VsphereVirtualDiskVolumeSource {
     /// Path that identifies vSphere volume vmdk
     pub volume_path: String,
 }
+
 
 impl crate::DeepMerge for VsphereVirtualDiskVolumeSource {
     fn merge_from(&mut self, other: Self) {

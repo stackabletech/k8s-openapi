@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.admissionregistration.v1.RuleWithOperations
 
 /// RuleWithOperations is a tuple of Operations and Resources. It is recommended to make sure that all the tuple expansions are valid.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct RuleWithOperations {
     /// APIGroups is the API groups the resources belong to. '*' is all groups. If '*' is present, the length of the slice must be one. Required.
     pub api_groups: Option<Vec<String>>,
@@ -24,6 +24,7 @@ pub struct RuleWithOperations {
     /// scope specifies the scope of this rule. Valid values are "Cluster", "Namespaced", and "*" "Cluster" means that only cluster-scoped resources will match this rule. Namespace API objects are cluster-scoped. "Namespaced" means that only namespaced resources will match this rule. "*" means that there are no scope restrictions. Subresources match the scope of their parent resource. Default is "*".
     pub scope: Option<String>,
 }
+
 
 impl crate::DeepMerge for RuleWithOperations {
     fn merge_from(&mut self, other: Self) {

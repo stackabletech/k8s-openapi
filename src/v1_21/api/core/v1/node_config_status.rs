@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NodeConfigStatus
 
 /// NodeConfigStatus describes the status of the config assigned by Node.Spec.ConfigSource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeConfigStatus {
     /// Active reports the checkpointed config the node is actively using. Active will represent either the current version of the Assigned config, or the current LastKnownGood config, depending on whether attempting to use the Assigned config results in an error.
     pub active: Option<crate::api::core::v1::NodeConfigSource>,
@@ -15,6 +15,7 @@ pub struct NodeConfigStatus {
     /// LastKnownGood reports the checkpointed config the node will fall back to when it encounters an error attempting to use the Assigned config. The Assigned config becomes the LastKnownGood config when the node determines that the Assigned config is stable and correct. This is currently implemented as a 10-minute soak period starting when the local record of Assigned config is updated. If the Assigned config is Active at the end of this period, it becomes the LastKnownGood. Note that if Spec.ConfigSource is reset to nil (use local defaults), the LastKnownGood is also immediately reset to nil, because the local default config is always assumed good. You should not make assumptions about the node's method of determining config stability and correctness, as this may change or become configurable in the future.
     pub last_known_good: Option<crate::api::core::v1::NodeConfigSource>,
 }
+
 
 impl crate::DeepMerge for NodeConfigStatus {
     fn merge_from(&mut self, other: Self) {

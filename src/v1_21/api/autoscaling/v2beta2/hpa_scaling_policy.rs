@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta2.HPAScalingPolicy
 
 /// HPAScalingPolicy is a single policy which must hold true for a specified past interval.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HPAScalingPolicy {
     /// PeriodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).
     pub period_seconds: i32,
@@ -12,6 +12,7 @@ pub struct HPAScalingPolicy {
     /// Value contains the amount of change which is permitted by the policy. It must be greater than zero
     pub value: i32,
 }
+
 
 impl crate::DeepMerge for HPAScalingPolicy {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.certificates.v1.CertificateSigningRequestStatus
 
 /// CertificateSigningRequestStatus contains conditions used to indicate approved/denied/failed status of the request, and the issued certificate.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequestStatus {
     /// certificate is populated with an issued certificate by the signer after an Approved condition is present. This field is set via the /status subresource. Once populated, this field is immutable.
     ///
@@ -30,6 +30,7 @@ pub struct CertificateSigningRequestStatus {
     /// conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed".
     pub conditions: Option<Vec<crate::api::certificates::v1::CertificateSigningRequestCondition>>,
 }
+
 
 impl crate::DeepMerge for CertificateSigningRequestStatus {
     fn merge_from(&mut self, other: Self) {

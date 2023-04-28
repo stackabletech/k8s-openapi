@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1alpha1.ClusterCIDRSpec
 
 /// ClusterCIDRSpec defines the desired state of ClusterCIDR.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ClusterCIDRSpec {
     /// IPv4 defines an IPv4 IP block in CIDR notation(e.g. "10.0.0.0/8"). At least one of IPv4 and IPv6 must be specified. This field is immutable.
     pub ipv4: Option<String>,
@@ -15,6 +15,7 @@ pub struct ClusterCIDRSpec {
     /// PerNodeHostBits defines the number of host bits to be configured per node. A subnet mask determines how much of the address is used for network bits and host bits. For example an IPv4 address of 192.168.0.0/24, splits the address into 24 bits for the network portion and 8 bits for the host portion. To allocate 256 IPs, set this field to 8 (a /24 mask for IPv4 or a /120 for IPv6). Minimum value is 4 (16 IPs). This field is immutable.
     pub per_node_host_bits: i32,
 }
+
 
 impl crate::DeepMerge for ClusterCIDRSpec {
     fn merge_from(&mut self, other: Self) {

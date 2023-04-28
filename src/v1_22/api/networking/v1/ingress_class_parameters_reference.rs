@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1.IngressClassParametersReference
 
 /// IngressClassParametersReference identifies an API object. This can be used to specify a cluster or namespace-scoped resource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct IngressClassParametersReference {
     /// APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
     pub api_group: Option<String>,
@@ -18,6 +18,7 @@ pub struct IngressClassParametersReference {
     /// Scope represents if this refers to a cluster or namespace scoped resource. This may be set to "Cluster" (default) or "Namespace". Field can be enabled with IngressClassNamespacedParams feature gate.
     pub scope: Option<String>,
 }
+
 
 impl crate::DeepMerge for IngressClassParametersReference {
     fn merge_from(&mut self, other: Self) {

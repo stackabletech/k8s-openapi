@@ -7,7 +7,7 @@
 ///  2. serving certificates for TLS endpoints kube-apiserver can connect to securely (with the "kubernetes.io/kubelet-serving" signerName).
 ///
 /// This API can be used to request client certificates to authenticate to kube-apiserver (with the "kubernetes.io/kube-apiserver-client" signerName), or to obtain certificates from custom non-Kubernetes signers.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequest {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
@@ -17,6 +17,7 @@ pub struct CertificateSigningRequest {
     /// status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.
     pub status: Option<crate::api::certificates::v1::CertificateSigningRequestStatus>,
 }
+
 
 // Begin certificates.k8s.io/v1/CertificateSigningRequest
 

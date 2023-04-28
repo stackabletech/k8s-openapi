@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Binding
 
 /// Binding ties one object to another; for example, a pod is bound to a node by a scheduler. Deprecated in 1.7, please use the bindings subresource of pods instead.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Binding {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -9,6 +9,7 @@ pub struct Binding {
     /// The target object that you want to bind to the standard object.
     pub target: crate::api::core::v1::ObjectReference,
 }
+
 
 // Begin /v1/Binding
 

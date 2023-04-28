@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.settings.v1alpha1.PodPresetSpec
 
 /// PodPresetSpec is a description of a pod preset.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodPresetSpec {
     /// Env defines the collection of EnvVar to inject into containers.
     pub env: Option<Vec<crate::api::core::v1::EnvVar>>,
@@ -18,6 +18,7 @@ pub struct PodPresetSpec {
     /// Volumes defines the collection of Volume to inject into the pod.
     pub volumes: Option<Vec<crate::api::core::v1::Volume>>,
 }
+
 
 impl crate::DeepMerge for PodPresetSpec {
     fn merge_from(&mut self, other: Self) {

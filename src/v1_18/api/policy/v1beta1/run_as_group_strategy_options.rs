@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.RunAsGroupStrategyOptions
 
 /// RunAsGroupStrategyOptions defines the strategy type and any options used to create the strategy.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct RunAsGroupStrategyOptions {
     /// ranges are the allowed ranges of gids that may be used. If you would like to force a single gid then supply a single range with the same start and end. Required for MustRunAs.
     pub ranges: Option<Vec<crate::api::policy::v1beta1::IDRange>>,
@@ -9,6 +9,7 @@ pub struct RunAsGroupStrategyOptions {
     /// rule is the strategy that will dictate the allowable RunAsGroup values that may be set.
     pub rule: String,
 }
+
 
 impl crate::DeepMerge for RunAsGroupStrategyOptions {
     fn merge_from(&mut self, other: Self) {

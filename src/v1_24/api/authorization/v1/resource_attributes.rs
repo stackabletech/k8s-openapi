@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authorization.v1.ResourceAttributes
 
 /// ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ResourceAttributes {
     /// Group is the API Group of the Resource.  "*" means all.
     pub group: Option<String>,
@@ -24,6 +24,7 @@ pub struct ResourceAttributes {
     /// Version is the API Version of the Resource.  "*" means all.
     pub version: Option<String>,
 }
+
 
 impl crate::DeepMerge for ResourceAttributes {
     fn merge_from(&mut self, other: Self) {

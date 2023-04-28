@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Container
 
 /// A single application container that you want to run within a pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Container {
     /// Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
     pub args: Option<Vec<String>>,
@@ -71,6 +71,7 @@ pub struct Container {
     /// Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.
     pub working_dir: Option<String>,
 }
+
 
 impl crate::DeepMerge for Container {
     fn merge_from(&mut self, other: Self) {

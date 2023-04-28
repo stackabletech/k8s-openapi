@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PodSecurityContext
 
 /// PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodSecurityContext {
     /// A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:
     ///
@@ -37,6 +37,7 @@ pub struct PodSecurityContext {
     /// The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.
     pub windows_options: Option<crate::api::core::v1::WindowsSecurityContextOptions>,
 }
+
 
 impl crate::DeepMerge for PodSecurityContext {
     fn merge_from(&mut self, other: Self) {

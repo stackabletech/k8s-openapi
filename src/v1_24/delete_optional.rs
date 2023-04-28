@@ -2,7 +2,7 @@
 
 /// Common parameters for all delete and delete-collection operations.
 #[cfg(feature = "api")]
-#[derive(Clone, Copy, Debug, Default, PartialEq)]
+#[derive(Clone, Copy, Debug, Default, PartialEq, value_size::Size)]
 pub struct DeleteOptional<'a> {
     /// APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     pub api_version: Option<&'a str>,
@@ -25,6 +25,7 @@ pub struct DeleteOptional<'a> {
     /// Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
     pub propagation_policy: Option<&'a str>,
 }
+
 
 impl<'a> crate::serde::Serialize for DeleteOptional<'a> {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error> where S: crate::serde::Serializer {

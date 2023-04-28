@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.EnvFromSource
 
 /// EnvFromSource represents the source of a set of ConfigMaps
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EnvFromSource {
     /// The ConfigMap to select from
     pub config_map_ref: Option<crate::api::core::v1::ConfigMapEnvSource>,
@@ -12,6 +12,7 @@ pub struct EnvFromSource {
     /// The Secret to select from
     pub secret_ref: Option<crate::api::core::v1::SecretEnvSource>,
 }
+
 
 impl crate::DeepMerge for EnvFromSource {
     fn merge_from(&mut self, other: Self) {

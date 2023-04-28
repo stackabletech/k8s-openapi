@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.CronJobSpec
 
 /// CronJobSpec describes how the job execution will look like and when it will actually run.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CronJobSpec {
     /// Specifies how to treat concurrent executions of a Job. Valid values are: - "Allow" (default): allows CronJobs to run concurrently; - "Forbid": forbids concurrent runs, skipping next run if previous run hasn't finished yet; - "Replace": cancels currently running job and replaces it with a new one
     ///
@@ -25,6 +25,7 @@ pub struct CronJobSpec {
     /// This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
     pub suspend: Option<bool>,
 }
+
 
 impl crate::DeepMerge for CronJobSpec {
     fn merge_from(&mut self, other: Self) {

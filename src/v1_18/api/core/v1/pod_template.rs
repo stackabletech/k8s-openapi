@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PodTemplate
 
 /// PodTemplate describes a template for creating copies of a predefined pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodTemplate {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -9,6 +9,7 @@ pub struct PodTemplate {
     /// Template defines the pods that will be created from this pod template. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub template: Option<crate::api::core::v1::PodTemplateSpec>,
 }
+
 
 // Begin /v1/PodTemplate
 

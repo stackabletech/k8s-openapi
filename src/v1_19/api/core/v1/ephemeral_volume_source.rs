@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.EphemeralVolumeSource
 
 /// Represents an ephemeral volume that is handled by a normal storage driver.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EphemeralVolumeSource {
     /// Specifies a read-only configuration for the volume. Defaults to false (read/write).
     pub read_only: Option<bool>,
@@ -15,6 +15,7 @@ pub struct EphemeralVolumeSource {
     /// Required, must not be nil.
     pub volume_claim_template: Option<crate::api::core::v1::PersistentVolumeClaimTemplate>,
 }
+
 
 impl crate::DeepMerge for EphemeralVolumeSource {
     fn merge_from(&mut self, other: Self) {

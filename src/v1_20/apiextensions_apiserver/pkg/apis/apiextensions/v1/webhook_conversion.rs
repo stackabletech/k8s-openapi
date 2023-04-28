@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.WebhookConversion
 
 /// WebhookConversion describes how to call a conversion webhook
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct WebhookConversion {
     /// clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.
     pub client_config: Option<crate::apiextensions_apiserver::pkg::apis::apiextensions::v1::WebhookClientConfig>,
@@ -9,6 +9,7 @@ pub struct WebhookConversion {
     /// conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.
     pub conversion_review_versions: Vec<String>,
 }
+
 
 impl crate::DeepMerge for WebhookConversion {
     fn merge_from(&mut self, other: Self) {

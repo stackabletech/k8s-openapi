@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.SecretReference
 
 /// SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SecretReference {
     /// Name is unique within a namespace to reference a secret resource.
     pub name: Option<String>,
@@ -9,6 +9,7 @@ pub struct SecretReference {
     /// Namespace defines the space within which the secret name must be unique.
     pub namespace: Option<String>,
 }
+
 
 impl crate::DeepMerge for SecretReference {
     fn merge_from(&mut self, other: Self) {

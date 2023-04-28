@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta1.PodsMetricStatus
 
 /// PodsMetricStatus indicates the current value of a metric describing each pod in the current scale target (for example, transactions-processed-per-second).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodsMetricStatus {
     /// currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity)
     pub current_average_value: crate::apimachinery::pkg::api::resource::Quantity,
@@ -12,6 +12,7 @@ pub struct PodsMetricStatus {
     /// selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
     pub selector: Option<crate::apimachinery::pkg::apis::meta::v1::LabelSelector>,
 }
+
 
 impl crate::DeepMerge for PodsMetricStatus {
     fn merge_from(&mut self, other: Self) {

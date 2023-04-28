@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.ReplicaSetCondition
 
 /// ReplicaSetCondition describes the state of a replica set at a certain point.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ReplicaSetCondition {
     /// The last time the condition transitioned from one status to another.
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -18,6 +18,7 @@ pub struct ReplicaSetCondition {
     /// Type of replica set condition.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for ReplicaSetCondition {
     fn merge_from(&mut self, other: Self) {

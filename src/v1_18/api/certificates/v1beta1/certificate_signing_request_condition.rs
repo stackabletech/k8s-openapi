@@ -1,6 +1,6 @@
 // Generated from definition io.k8s.api.certificates.v1beta1.CertificateSigningRequestCondition
 
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequestCondition {
     /// timestamp for the last update to this condition
     pub last_update_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -14,6 +14,7 @@ pub struct CertificateSigningRequestCondition {
     /// request approval state, currently Approved or Denied.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for CertificateSigningRequestCondition {
     fn merge_from(&mut self, other: Self) {

@@ -2,7 +2,7 @@
 
 /// The common response type for all patch API operations.
 #[cfg(feature = "api")]
-#[derive(Debug)]
+#[derive(Debug, value_size::Size)]
 pub enum PatchResponse<T> where T: crate::serde::de::DeserializeOwned {
     Ok(T),
     Created(T),

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.admissionregistration.v1beta1.ServiceReference
 
 /// ServiceReference holds a reference to Service.legacy.k8s.io
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServiceReference {
     /// `name` is the name of the service. Required
     pub name: String,
@@ -15,6 +15,7 @@ pub struct ServiceReference {
     /// If specified, the port on the service that hosting webhook. Default to 443 for backward compatibility. `port` should be a valid port number (1-65535, inclusive).
     pub port: Option<i32>,
 }
+
 
 impl crate::DeepMerge for ServiceReference {
     fn merge_from(&mut self, other: Self) {

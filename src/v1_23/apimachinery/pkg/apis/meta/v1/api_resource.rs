@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.APIResource
 
 /// APIResource specifies the name of a resource and whether it is namespaced.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct APIResource {
     /// categories is a list of the grouped resources this resource belongs to (e.g. 'all')
     pub categories: Option<Vec<String>>,
@@ -33,6 +33,7 @@ pub struct APIResource {
     /// version is the preferred version of the resource.  Empty implies the version of the containing resource list For subresources, this may have a different value, for example: v1 (while inside a v1beta1 version of the core resource's group)".
     pub version: Option<String>,
 }
+
 
 impl crate::DeepMerge for APIResource {
     fn merge_from(&mut self, other: Self) {

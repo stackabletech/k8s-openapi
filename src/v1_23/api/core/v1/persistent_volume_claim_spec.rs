@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PersistentVolumeClaimSpec
 
 /// PersistentVolumeClaimSpec describes the common attributes of storage devices and allows a Source for provider-specific attributes
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PersistentVolumeClaimSpec {
     /// AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
     pub access_modes: Option<Vec<String>>,
@@ -32,6 +32,7 @@ pub struct PersistentVolumeClaimSpec {
     /// VolumeName is the binding reference to the PersistentVolume backing this claim.
     pub volume_name: Option<String>,
 }
+
 
 impl crate::DeepMerge for PersistentVolumeClaimSpec {
     fn merge_from(&mut self, other: Self) {

@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.APIGroupList
 
 /// APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct APIGroupList {
     /// groups is a list of APIGroup.
     pub groups: Vec<crate::apimachinery::pkg::apis::meta::v1::APIGroup>,
 }
+
 
 impl crate::Resource for APIGroupList {
     const API_VERSION: &'static str = "v1";

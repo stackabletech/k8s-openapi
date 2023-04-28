@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ResourceFieldSelector
 
 /// ResourceFieldSelector represents container resources (cpu, memory) and their output format
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ResourceFieldSelector {
     /// Container name: required for volumes, optional for env vars
     pub container_name: Option<String>,
@@ -12,6 +12,7 @@ pub struct ResourceFieldSelector {
     /// Required: resource to select
     pub resource: String,
 }
+
 
 impl crate::DeepMerge for ResourceFieldSelector {
     fn merge_from(&mut self, other: Self) {

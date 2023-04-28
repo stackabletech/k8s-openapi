@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.flowcontrol.v1alpha1.FlowSchemaStatus
 
 /// FlowSchemaStatus represents the current state of a FlowSchema.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct FlowSchemaStatus {
     /// `conditions` is a list of the current states of FlowSchema.
     pub conditions: Option<Vec<crate::api::flowcontrol::v1alpha1::FlowSchemaCondition>>,
 }
+
 
 impl crate::DeepMerge for FlowSchemaStatus {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.auditregistration.v1alpha1.Policy
 
 /// Policy defines the configuration of how audit events are logged
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Policy {
     /// The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
     pub level: String,
@@ -9,6 +9,7 @@ pub struct Policy {
     /// Stages is a list of stages for which events are created.
     pub stages: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for Policy {
     fn merge_from(&mut self, other: Self) {

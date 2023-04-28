@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.rbac.v1alpha1.Role
 
 /// Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 Role, and will no longer be served in v1.20.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Role {
     /// Standard object's metadata.
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -9,6 +9,7 @@ pub struct Role {
     /// Rules holds all the PolicyRules for this Role
     pub rules: Option<Vec<crate::api::rbac::v1alpha1::PolicyRule>>,
 }
+
 
 // Begin rbac.authorization.k8s.io/v1alpha1/Role
 

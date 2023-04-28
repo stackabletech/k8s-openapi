@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta2.MetricTarget
 
 /// MetricTarget defines the target value, average value, or average utilization of a specific metric
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct MetricTarget {
     /// averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
     pub average_utilization: Option<i32>,
@@ -15,6 +15,7 @@ pub struct MetricTarget {
     /// value is the target value of the metric (as a quantity).
     pub value: Option<crate::apimachinery::pkg::api::resource::Quantity>,
 }
+
 
 impl crate::DeepMerge for MetricTarget {
     fn merge_from(&mut self, other: Self) {

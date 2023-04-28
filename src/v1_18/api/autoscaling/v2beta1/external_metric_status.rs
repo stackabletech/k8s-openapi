@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2beta1.ExternalMetricStatus
 
 /// ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ExternalMetricStatus {
     /// currentAverageValue is the current value of metric averaged over autoscaled pods.
     pub current_average_value: Option<crate::apimachinery::pkg::api::resource::Quantity>,
@@ -15,6 +15,7 @@ pub struct ExternalMetricStatus {
     /// metricSelector is used to identify a specific time series within a given metric.
     pub metric_selector: Option<crate::apimachinery::pkg::apis::meta::v1::LabelSelector>,
 }
+
 
 impl crate::DeepMerge for ExternalMetricStatus {
     fn merge_from(&mut self, other: Self) {

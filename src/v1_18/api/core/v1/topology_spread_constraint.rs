@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.TopologySpreadConstraint
 
 /// TopologySpreadConstraint specifies how to spread matching pods among the given topology.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TopologySpreadConstraint {
     /// LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.
     pub label_selector: Option<crate::apimachinery::pkg::apis::meta::v1::LabelSelector>,
@@ -15,6 +15,7 @@ pub struct TopologySpreadConstraint {
     /// WhenUnsatisfiable indicates how to deal with a pod if it doesn't satisfy the spread constraint. - DoNotSchedule (default) tells the scheduler not to schedule it - ScheduleAnyway tells the scheduler to still schedule it It's considered as "Unsatisfiable" if and only if placing incoming pod on any topology violates "MaxSkew". For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 3/1/1: | zone1 | zone2 | zone3 | | P P P |   P   |   P   | If WhenUnsatisfiable is set to DoNotSchedule, incoming pod can only be scheduled to zone2(zone3) to become 3/2/1(3/1/2) as ActualSkew(2-1) on zone2(zone3) satisfies MaxSkew(1). In other words, the cluster can still be imbalanced, but scheduler won't make it *more* imbalanced. It's a required field.
     pub when_unsatisfiable: String,
 }
+
 
 impl crate::DeepMerge for TopologySpreadConstraint {
     fn merge_from(&mut self, other: Self) {

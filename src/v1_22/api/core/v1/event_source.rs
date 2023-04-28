@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.EventSource
 
 /// EventSource contains information for an event.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EventSource {
     /// Component from which the event is generated.
     pub component: Option<String>,
@@ -9,6 +9,7 @@ pub struct EventSource {
     /// Node name on which the event is generated.
     pub host: Option<String>,
 }
+
 
 impl crate::DeepMerge for EventSource {
     fn merge_from(&mut self, other: Self) {

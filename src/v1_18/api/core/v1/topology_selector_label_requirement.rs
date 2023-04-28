@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.TopologySelectorLabelRequirement
 
 /// A topology selector requirement is a selector that matches given label. This is an alpha feature and may change in the future.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TopologySelectorLabelRequirement {
     /// The label key that the selector applies to.
     pub key: String,
@@ -9,6 +9,7 @@ pub struct TopologySelectorLabelRequirement {
     /// An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
     pub values: Vec<String>,
 }
+
 
 impl crate::DeepMerge for TopologySelectorLabelRequirement {
     fn merge_from(&mut self, other: Self) {

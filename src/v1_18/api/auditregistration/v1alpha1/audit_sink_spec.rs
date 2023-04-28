@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.auditregistration.v1alpha1.AuditSinkSpec
 
 /// AuditSinkSpec holds the spec for the audit sink
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AuditSinkSpec {
     /// Policy defines the policy for selecting which events should be sent to the webhook required
     pub policy: crate::api::auditregistration::v1alpha1::Policy,
@@ -9,6 +9,7 @@ pub struct AuditSinkSpec {
     /// Webhook to send events required
     pub webhook: crate::api::auditregistration::v1alpha1::Webhook,
 }
+
 
 impl crate::DeepMerge for AuditSinkSpec {
     fn merge_from(&mut self, other: Self) {

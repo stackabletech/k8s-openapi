@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.HTTPHeader
 
 /// HTTPHeader describes a custom header to be used in HTTP probes
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HTTPHeader {
     /// The header field name
     pub name: String,
@@ -9,6 +9,7 @@ pub struct HTTPHeader {
     /// The header field value
     pub value: String,
 }
+
 
 impl crate::DeepMerge for HTTPHeader {
     fn merge_from(&mut self, other: Self) {

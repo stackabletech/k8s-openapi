@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.GlusterfsVolumeSource
 
 /// Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct GlusterfsVolumeSource {
     /// endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
     pub endpoints: String,
@@ -12,6 +12,7 @@ pub struct GlusterfsVolumeSource {
     /// readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
     pub read_only: Option<bool>,
 }
+
 
 impl crate::DeepMerge for GlusterfsVolumeSource {
     fn merge_from(&mut self, other: Self) {

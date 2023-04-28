@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.EnvVarSource
 
 /// EnvVarSource represents a source for the value of an EnvVar.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EnvVarSource {
     /// Selects a key of a ConfigMap.
     pub config_map_key_ref: Option<crate::api::core::v1::ConfigMapKeySelector>,
@@ -15,6 +15,7 @@ pub struct EnvVarSource {
     /// Selects a key of a secret in the pod's namespace
     pub secret_key_ref: Option<crate::api::core::v1::SecretKeySelector>,
 }
+
 
 impl crate::DeepMerge for EnvVarSource {
     fn merge_from(&mut self, other: Self) {

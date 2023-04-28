@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1beta1.ServiceAccountSubject
 
 /// ServiceAccountSubject holds detailed information for service-account-kind subject.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServiceAccountSubject {
     /// `name` is the name of matching ServiceAccount objects, or "*" to match regardless of name. Required.
     pub name: String,
@@ -9,6 +9,7 @@ pub struct ServiceAccountSubject {
     /// `namespace` is the namespace of matching ServiceAccount objects. Required.
     pub namespace: String,
 }
+
 
 impl crate::DeepMerge for ServiceAccountSubject {
     fn merge_from(&mut self, other: Self) {

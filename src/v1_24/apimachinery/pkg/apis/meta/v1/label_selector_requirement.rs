@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement
 
 /// A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LabelSelectorRequirement {
     /// key is the label key that the selector applies to.
     pub key: String,
@@ -12,6 +12,7 @@ pub struct LabelSelectorRequirement {
     /// values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
     pub values: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for LabelSelectorRequirement {
     fn merge_from(&mut self, other: Self) {

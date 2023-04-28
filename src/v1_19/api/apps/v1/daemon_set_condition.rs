@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.DaemonSetCondition
 
 /// DaemonSetCondition describes the state of a DaemonSet at a certain point.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DaemonSetCondition {
     /// Last time the condition transitioned from one status to another.
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -18,6 +18,7 @@ pub struct DaemonSetCondition {
     /// Type of DaemonSet condition.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for DaemonSetCondition {
     fn merge_from(&mut self, other: Self) {

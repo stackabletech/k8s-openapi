@@ -4,7 +4,7 @@
 ///  - Network: A single stable DNS and hostname.
 ///  - Storage: As many VolumeClaims as requested.
 /// The StatefulSet guarantees that a given network identity will always map to the same storage identity.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StatefulSet {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
@@ -14,6 +14,7 @@ pub struct StatefulSet {
     /// Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
     pub status: Option<crate::api::apps::v1::StatefulSetStatus>,
 }
+
 
 // Begin apps/v1/StatefulSet
 

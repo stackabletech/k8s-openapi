@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1alpha1.NonResourcePolicyRule
 
 /// NonResourcePolicyRule is a predicate that matches non-resource requests according to their verb and the target non-resource URL. A NonResourcePolicyRule matches a request if and only if both (a) at least one member of verbs matches the request and (b) at least one member of nonResourceURLs matches the request.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NonResourcePolicyRule {
     /// `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
     ///   - "/healthz" is legal
@@ -15,6 +15,7 @@ pub struct NonResourcePolicyRule {
     /// `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
     pub verbs: Vec<String>,
 }
+
 
 impl crate::DeepMerge for NonResourcePolicyRule {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.CSIVolumeSource
 
 /// Represents a source location of a volume to mount, managed by an external CSI driver
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CSIVolumeSource {
     /// Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
     pub driver: String,
@@ -18,6 +18,7 @@ pub struct CSIVolumeSource {
     /// VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.
     pub volume_attributes: Option<std::collections::BTreeMap<String, String>>,
 }
+
 
 impl crate::DeepMerge for CSIVolumeSource {
     fn merge_from(&mut self, other: Self) {

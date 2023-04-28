@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.storage.v1beta1.VolumeAttachmentStatus
 
 /// VolumeAttachmentStatus is the status of a VolumeAttachment request.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VolumeAttachmentStatus {
     /// The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
     pub attach_error: Option<crate::api::storage::v1beta1::VolumeError>,
@@ -15,6 +15,7 @@ pub struct VolumeAttachmentStatus {
     /// The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
     pub detach_error: Option<crate::api::storage::v1beta1::VolumeError>,
 }
+
 
 impl crate::DeepMerge for VolumeAttachmentStatus {
     fn merge_from(&mut self, other: Self) {

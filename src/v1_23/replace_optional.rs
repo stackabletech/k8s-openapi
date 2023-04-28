@@ -2,7 +2,7 @@
 
 /// Common parameters for all replace operations.
 #[cfg(feature = "api")]
-#[derive(Clone, Copy, Debug, Default, PartialEq)]
+#[derive(Clone, Copy, Debug, Default, PartialEq, value_size::Size)]
 pub struct ReplaceOptional<'a> {
     /// When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
     pub dry_run: Option<&'a str>,
@@ -13,6 +13,7 @@ pub struct ReplaceOptional<'a> {
     /// fieldValidation determines how the server should respond to unknown/duplicate fields in the object in the request. Introduced as alpha in 1.23, older servers or servers with the `ServerSideFieldValidation` feature disabled will discard valid values specified in  this param and not perform any server side field validation. Valid values are: - Ignore: ignores unknown/duplicate fields. - Warn: responds with a warning for each unknown/duplicate field, but successfully serves the request. - Strict: fails the request on unknown/duplicate fields.
     pub field_validation: Option<&'a str>,
 }
+
 
 #[cfg(feature = "api")]
 impl<'a> ReplaceOptional<'a> {

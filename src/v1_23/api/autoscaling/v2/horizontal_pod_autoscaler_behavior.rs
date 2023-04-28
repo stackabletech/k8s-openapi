@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerBehavior
 
 /// HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively).
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HorizontalPodAutoscalerBehavior {
     /// scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
     pub scale_down: Option<crate::api::autoscaling::v2::HPAScalingRules>,
@@ -12,6 +12,7 @@ pub struct HorizontalPodAutoscalerBehavior {
     /// No stabilization is used.
     pub scale_up: Option<crate::api::autoscaling::v2::HPAScalingRules>,
 }
+
 
 impl crate::DeepMerge for HorizontalPodAutoscalerBehavior {
     fn merge_from(&mut self, other: Self) {

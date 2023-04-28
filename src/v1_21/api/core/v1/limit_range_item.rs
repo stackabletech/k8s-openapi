@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.LimitRangeItem
 
 /// LimitRangeItem defines a min/max usage limit for any resource that matches on kind.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LimitRangeItem {
     /// Default resource requirement limit value by resource name if resource limit is omitted.
     pub default: Option<std::collections::BTreeMap<String, crate::apimachinery::pkg::api::resource::Quantity>>,
@@ -21,6 +21,7 @@ pub struct LimitRangeItem {
     /// Type of resource that this limit applies to.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for LimitRangeItem {
     fn merge_from(&mut self, other: Self) {

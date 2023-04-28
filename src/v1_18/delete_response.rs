@@ -2,7 +2,7 @@
 
 /// The common response type for all delete API operations and delete-collection API operations.
 #[cfg(feature = "api")]
-#[derive(Debug)]
+#[derive(Debug, value_size::Size)]
 pub enum DeleteResponse<T> where T: crate::serde::de::DeserializeOwned {
     OkStatus(crate::apimachinery::pkg::apis::meta::v1::Status),
     OkValue(T),

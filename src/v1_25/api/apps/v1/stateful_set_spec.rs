@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.StatefulSetSpec
 
 /// A StatefulSetSpec is the specification of a StatefulSet.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StatefulSetSpec {
     /// Minimum number of seconds for which a newly created pod should be ready without any of its container crashing for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
     pub min_ready_seconds: Option<i32>,
@@ -34,6 +34,7 @@ pub struct StatefulSetSpec {
     /// volumeClaimTemplates is a list of claims that pods are allowed to reference. The StatefulSet controller is responsible for mapping network identities to claims in a way that maintains the identity of a pod. Every claim in this list must have at least one matching (by name) volumeMount in one container in the template. A claim in this list takes precedence over any volumes in the template, with the same name.
     pub volume_claim_templates: Option<Vec<crate::api::core::v1::PersistentVolumeClaim>>,
 }
+
 
 impl crate::DeepMerge for StatefulSetSpec {
     fn merge_from(&mut self, other: Self) {

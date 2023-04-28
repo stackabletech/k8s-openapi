@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIService
 
 /// APIService represents a server for a particular GroupVersion. Name must be "version.group".
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct APIService {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct APIService {
     /// Status contains derived information about an API server
     pub status: Option<crate::kube_aggregator::pkg::apis::apiregistration::v1::APIServiceStatus>,
 }
+
 
 // Begin apiregistration.k8s.io/v1/APIService
 

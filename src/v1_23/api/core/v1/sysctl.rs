@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Sysctl
 
 /// Sysctl defines a kernel parameter to be set
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Sysctl {
     /// Name of a property to set
     pub name: String,
@@ -9,6 +9,7 @@ pub struct Sysctl {
     /// Value of a property to set
     pub value: String,
 }
+
 
 impl crate::DeepMerge for Sysctl {
     fn merge_from(&mut self, other: Self) {

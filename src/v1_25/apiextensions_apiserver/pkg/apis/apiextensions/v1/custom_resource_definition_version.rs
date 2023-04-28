@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionVersion
 
 /// CustomResourceDefinitionVersion describes a version for CRD.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CustomResourceDefinitionVersion {
     /// additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.
     pub additional_printer_columns: Option<Vec<crate::apiextensions_apiserver::pkg::apis::apiextensions::v1::CustomResourceColumnDefinition>>,
@@ -27,6 +27,7 @@ pub struct CustomResourceDefinitionVersion {
     /// subresources specify what subresources this version of the defined custom resource have.
     pub subresources: Option<crate::apiextensions_apiserver::pkg::apis::apiextensions::v1::CustomResourceSubresources>,
 }
+
 
 impl crate::DeepMerge for CustomResourceDefinitionVersion {
     fn merge_from(&mut self, other: Self) {

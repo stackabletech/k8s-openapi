@@ -2,7 +2,7 @@
 
 /// The common response type for all replace API operations.
 #[cfg(feature = "api")]
-#[derive(Debug)]
+#[derive(Debug, value_size::Size)]
 pub enum ReplaceResponse<T> where T: crate::serde::de::DeserializeOwned {
     Ok(T),
     Created(T),

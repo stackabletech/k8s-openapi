@@ -9,7 +9,7 @@
 /// The producer of these objects can decide which approach is more suitable.
 ///
 /// They are consumed by the kube-scheduler if the CSIStorageCapacity beta feature gate is enabled there and a CSI driver opts into capacity-aware scheduling with CSIDriver.StorageCapacity.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CSIStorageCapacity {
     /// Capacity is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
     ///
@@ -34,6 +34,7 @@ pub struct CSIStorageCapacity {
     /// The name of the StorageClass that the reported capacity applies to. It must meet the same requirements as the name of a StorageClass object (non-empty, DNS subdomain). If that object no longer exists, the CSIStorageCapacity object is obsolete and should be removed by its creator. This field is immutable.
     pub storage_class_name: String,
 }
+
 
 // Begin storage.k8s.io/v1alpha1/CSIStorageCapacity
 

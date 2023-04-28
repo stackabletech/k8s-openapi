@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceCondition
 
 /// APIServiceCondition describes the state of an APIService at a particular point
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct APIServiceCondition {
     /// Last time the condition transitioned from one status to another.
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -18,6 +18,7 @@ pub struct APIServiceCondition {
     /// Type is the type of the condition.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for APIServiceCondition {
     fn merge_from(&mut self, other: Self) {

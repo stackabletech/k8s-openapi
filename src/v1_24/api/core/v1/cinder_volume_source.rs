@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.CinderVolumeSource
 
 /// Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CinderVolumeSource {
     /// fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
     pub fs_type: Option<String>,
@@ -15,6 +15,7 @@ pub struct CinderVolumeSource {
     /// volumeID used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
     pub volume_id: String,
 }
+
 
 impl crate::DeepMerge for CinderVolumeSource {
     fn merge_from(&mut self, other: Self) {

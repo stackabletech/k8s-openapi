@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.SecurityContext
 
 /// SecurityContext holds security configuration that will be applied to a container. Some fields are present in both SecurityContext and PodSecurityContext.  When both are set, the values in SecurityContext take precedence.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SecurityContext {
     /// AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN
     pub allow_privilege_escalation: Option<bool>,
@@ -36,6 +36,7 @@ pub struct SecurityContext {
     /// The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
     pub windows_options: Option<crate::api::core::v1::WindowsSecurityContextOptions>,
 }
+
 
 impl crate::DeepMerge for SecurityContext {
     fn merge_from(&mut self, other: Self) {

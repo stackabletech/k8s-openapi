@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.QuobyteVolumeSource
 
 /// Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct QuobyteVolumeSource {
     /// Group to map volume access to Default is no group
     pub group: Option<String>,
@@ -21,6 +21,7 @@ pub struct QuobyteVolumeSource {
     /// Volume is a string that references an already created Quobyte volume by name.
     pub volume: String,
 }
+
 
 impl crate::DeepMerge for QuobyteVolumeSource {
     fn merge_from(&mut self, other: Self) {

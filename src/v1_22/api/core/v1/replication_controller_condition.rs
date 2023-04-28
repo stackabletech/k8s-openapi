@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ReplicationControllerCondition
 
 /// ReplicationControllerCondition describes the state of a replication controller at a certain point.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ReplicationControllerCondition {
     /// The last time the condition transitioned from one status to another.
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -18,6 +18,7 @@ pub struct ReplicationControllerCondition {
     /// Type of replication controller condition.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for ReplicationControllerCondition {
     fn merge_from(&mut self, other: Self) {

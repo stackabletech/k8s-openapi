@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.Condition
 
 /// Condition contains details for one aspect of the current state of this API Resource.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, value_size::Size)]
 pub struct Condition {
     /// lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
     pub last_transition_time: crate::apimachinery::pkg::apis::meta::v1::Time,
@@ -21,6 +21,7 @@ pub struct Condition {
     /// type of condition in CamelCase or in foo.example.com/CamelCase.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for Condition {
     fn merge_from(&mut self, other: Self) {

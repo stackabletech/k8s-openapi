@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PodCondition
 
 /// PodCondition contains details for the current condition of this pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodCondition {
     /// Last time we probed the condition.
     pub last_probe_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -21,6 +21,7 @@ pub struct PodCondition {
     /// Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for PodCondition {
     fn merge_from(&mut self, other: Self) {

@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.ContainerStateRunning
 
 /// ContainerStateRunning is a running state of a container.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ContainerStateRunning {
     /// Time at which the container was last (re-)started
     pub started_at: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
 }
+
 
 impl crate::DeepMerge for ContainerStateRunning {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ContainerImage
 
 /// Describe a container image
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ContainerImage {
     /// Names by which this image is known. e.g. \["kubernetes.example/hyperkube:v1.0.7", "cloud-vendor.registry.example/cloud-vendor/hyperkube:v1.0.7"\]
     pub names: Option<Vec<String>>,
@@ -9,6 +9,7 @@ pub struct ContainerImage {
     /// The size of the image in bytes.
     pub size_bytes: Option<i64>,
 }
+
 
 impl crate::DeepMerge for ContainerImage {
     fn merge_from(&mut self, other: Self) {

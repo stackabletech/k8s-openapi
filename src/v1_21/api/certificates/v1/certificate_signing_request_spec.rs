@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.certificates.v1.CertificateSigningRequestSpec
 
 /// CertificateSigningRequestSpec contains the certificate request.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequestSpec {
     /// extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
     pub extra: Option<std::collections::BTreeMap<String, Vec<String>>>,
@@ -57,6 +57,7 @@ pub struct CertificateSigningRequestSpec {
     /// username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
     pub username: Option<String>,
 }
+
 
 impl crate::DeepMerge for CertificateSigningRequestSpec {
     fn merge_from(&mut self, other: Self) {

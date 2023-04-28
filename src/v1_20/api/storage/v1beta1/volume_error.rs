@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.storage.v1beta1.VolumeError
 
 /// VolumeError captures an error encountered during a volume operation.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VolumeError {
     /// String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
     pub message: Option<String>,
@@ -9,6 +9,7 @@ pub struct VolumeError {
     /// Time the error was encountered.
     pub time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
 }
+
 
 impl crate::DeepMerge for VolumeError {
     fn merge_from(&mut self, other: Self) {

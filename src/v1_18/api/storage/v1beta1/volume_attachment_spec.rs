@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.storage.v1beta1.VolumeAttachmentSpec
 
 /// VolumeAttachmentSpec is the specification of a VolumeAttachment request.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VolumeAttachmentSpec {
     /// Attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName().
     pub attacher: String,
@@ -12,6 +12,7 @@ pub struct VolumeAttachmentSpec {
     /// Source represents the volume that should be attached.
     pub source: crate::api::storage::v1beta1::VolumeAttachmentSource,
 }
+
 
 impl crate::DeepMerge for VolumeAttachmentSpec {
     fn merge_from(&mut self, other: Self) {

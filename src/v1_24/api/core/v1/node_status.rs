@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NodeStatus
 
 /// NodeStatus is information about the current status of a node.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NodeStatus {
     /// List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.
     pub addresses: Option<Vec<crate::api::core::v1::NodeAddress>>,
@@ -37,6 +37,7 @@ pub struct NodeStatus {
     /// List of attachable volumes in use (mounted) by the node.
     pub volumes_in_use: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for NodeStatus {
     fn merge_from(&mut self, other: Self) {

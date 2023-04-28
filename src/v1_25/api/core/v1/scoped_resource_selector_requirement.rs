@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ScopedResourceSelectorRequirement
 
 /// A scoped-resource selector requirement is a selector that contains values, a scope name, and an operator that relates the scope name and values.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ScopedResourceSelectorRequirement {
     /// Represents a scope's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
     ///
@@ -14,6 +14,7 @@ pub struct ScopedResourceSelectorRequirement {
     /// An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
     pub values: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for ScopedResourceSelectorRequirement {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.discovery.v1.EndpointPort
 
 /// EndpointPort represents a Port used by an EndpointSlice
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EndpointPort {
     /// The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and https://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
     pub app_protocol: Option<String>,
@@ -15,6 +15,7 @@ pub struct EndpointPort {
     /// The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
     pub protocol: Option<String>,
 }
+
 
 impl crate::DeepMerge for EndpointPort {
     fn merge_from(&mut self, other: Self) {

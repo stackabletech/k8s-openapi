@@ -1,10 +1,11 @@
 // Generated from definition io.k8s.api.authorization.v1.SelfSubjectRulesReviewSpec
 
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SelfSubjectRulesReviewSpec {
     /// Namespace to evaluate rules for. Required.
     pub namespace: Option<String>,
 }
+
 
 impl crate::DeepMerge for SelfSubjectRulesReviewSpec {
     fn merge_from(&mut self, other: Self) {

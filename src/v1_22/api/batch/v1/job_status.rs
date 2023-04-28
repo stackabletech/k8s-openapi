@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1.JobStatus
 
 /// JobStatus represents the current state of a Job.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct JobStatus {
     /// The number of actively running pods.
     pub active: Option<i32>,
@@ -32,6 +32,7 @@ pub struct JobStatus {
     /// This field is alpha-level. The job controller only makes use of this field when the feature gate PodTrackingWithFinalizers is enabled. Old jobs might not be tracked using this field, in which case the field remains null.
     pub uncounted_terminated_pods: Option<crate::api::batch::v1::UncountedTerminatedPods>,
 }
+
 
 impl crate::DeepMerge for JobStatus {
     fn merge_from(&mut self, other: Self) {

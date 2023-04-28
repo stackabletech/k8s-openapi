@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.WindowsSecurityContextOptions
 
 /// WindowsSecurityContextOptions contain Windows-specific options and credentials.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct WindowsSecurityContextOptions {
     /// GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
     pub gmsa_credential_spec: Option<String>,
@@ -12,6 +12,7 @@ pub struct WindowsSecurityContextOptions {
     /// The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
     pub run_as_user_name: Option<String>,
 }
+
 
 impl crate::DeepMerge for WindowsSecurityContextOptions {
     fn merge_from(&mut self, other: Self) {

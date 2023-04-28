@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authentication.v1.TokenRequest
 
 /// TokenRequest requests a token for a given service account.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TokenRequest {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
@@ -9,6 +9,7 @@ pub struct TokenRequest {
 
     pub status: Option<crate::api::authentication::v1::TokenRequestStatus>,
 }
+
 
 // Begin authentication.k8s.io/v1/TokenRequest
 

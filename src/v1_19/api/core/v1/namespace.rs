@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Namespace
 
 /// Namespace provides a scope for Names. Use of multiple namespaces is optional.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Namespace {
     /// Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct Namespace {
     /// Status describes the current status of a Namespace. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub status: Option<crate::api::core::v1::NamespaceStatus>,
 }
+
 
 // Begin /v1/Namespace
 

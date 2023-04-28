@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v2.MetricIdentifier
 
 /// MetricIdentifier defines the name and optionally selector for a metric
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct MetricIdentifier {
     /// name is the name of the given metric
     pub name: String,
@@ -9,6 +9,7 @@ pub struct MetricIdentifier {
     /// selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
     pub selector: Option<crate::apimachinery::pkg::apis::meta::v1::LabelSelector>,
 }
+
 
 impl crate::DeepMerge for MetricIdentifier {
     fn merge_from(&mut self, other: Self) {

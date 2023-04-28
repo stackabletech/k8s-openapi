@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta
 
 /// ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ListMeta {
     /// continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.
     pub continue_: Option<String>,
@@ -15,6 +15,7 @@ pub struct ListMeta {
     /// Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
     pub self_link: Option<String>,
 }
+
 
 impl crate::DeepMerge for ListMeta {
     fn merge_from(&mut self, other: Self) {

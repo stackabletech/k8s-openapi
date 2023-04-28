@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ServicePort
 
 /// ServicePort contains information on service's port.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ServicePort {
     /// The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and https://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
     pub app_protocol: Option<String>,
@@ -22,6 +22,7 @@ pub struct ServicePort {
     /// Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports. If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services with clusterIP=None, and should be omitted or set equal to the 'port' field. More info: https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service
     pub target_port: Option<crate::apimachinery::pkg::util::intstr::IntOrString>,
 }
+
 
 impl crate::DeepMerge for ServicePort {
     fn merge_from(&mut self, other: Self) {

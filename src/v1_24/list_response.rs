@@ -2,7 +2,7 @@
 
 /// The common response type for all list API operations.
 #[cfg(feature = "api")]
-#[derive(Debug)]
+#[derive(Debug, value_size::Size)]
 pub enum ListResponse<T> where T: crate::serde::de::DeserializeOwned + crate::ListableResource {
     Ok(crate::List<T>),
     Other(Result<Option<crate::serde_json::Value>, crate::serde_json::Error>),

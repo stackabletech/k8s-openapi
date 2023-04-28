@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1.Eviction
 
 /// Eviction evicts a pod from its node subject to certain policies and safety constraints. This is a subresource of Pod.  A request to cause such an eviction is created by POSTing to .../pods/\<pod name\>/evictions.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Eviction {
     /// DeleteOptions may be provided
     pub delete_options: Option<crate::apimachinery::pkg::apis::meta::v1::DeleteOptions>,
@@ -9,6 +9,7 @@ pub struct Eviction {
     /// ObjectMeta describes the pod that is being evicted.
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 }
+
 
 // Begin policy/v1/Eviction
 

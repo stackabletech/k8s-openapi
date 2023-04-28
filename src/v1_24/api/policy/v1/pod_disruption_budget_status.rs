@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1.PodDisruptionBudgetStatus
 
 /// PodDisruptionBudgetStatus represents information about the status of a PodDisruptionBudget. Status may trail the actual state of a system.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodDisruptionBudgetStatus {
     /// Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn't able to compute
     ///               the number of allowed disruptions. Therefore no disruptions are
@@ -32,6 +32,7 @@ pub struct PodDisruptionBudgetStatus {
     /// Most recent generation observed when updating this PDB status. DisruptionsAllowed and other status information is valid only if observedGeneration equals to PDB's object generation.
     pub observed_generation: Option<i64>,
 }
+
 
 impl crate::DeepMerge for PodDisruptionBudgetStatus {
     fn merge_from(&mut self, other: Self) {

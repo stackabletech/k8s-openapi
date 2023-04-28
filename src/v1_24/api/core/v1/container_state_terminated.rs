@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ContainerStateTerminated
 
 /// ContainerStateTerminated is a terminated state of a container.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ContainerStateTerminated {
     /// Container's ID in the format '\<type\>://\<container_id\>'
     pub container_id: Option<String>,
@@ -24,6 +24,7 @@ pub struct ContainerStateTerminated {
     /// Time at which previous execution of the container started
     pub started_at: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
 }
+
 
 impl crate::DeepMerge for ContainerStateTerminated {
     fn merge_from(&mut self, other: Self) {

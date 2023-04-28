@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.DaemonSetStatus
 
 /// DaemonSetStatus represents the current status of a daemon set.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DaemonSetStatus {
     /// Count of hash collisions for the DaemonSet. The DaemonSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
     pub collision_count: Option<i32>,
@@ -33,6 +33,7 @@ pub struct DaemonSetStatus {
     /// The total number of nodes that are running updated daemon pod
     pub updated_number_scheduled: Option<i32>,
 }
+
 
 impl crate::DeepMerge for DaemonSetStatus {
     fn merge_from(&mut self, other: Self) {

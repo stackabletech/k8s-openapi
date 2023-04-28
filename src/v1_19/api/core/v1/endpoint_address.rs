@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.EndpointAddress
 
 /// EndpointAddress is a tuple that describes single IP address.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct EndpointAddress {
     /// The Hostname of this endpoint
     pub hostname: Option<String>,
@@ -15,6 +15,7 @@ pub struct EndpointAddress {
     /// Reference to object providing the endpoint.
     pub target_ref: Option<crate::api::core::v1::ObjectReference>,
 }
+
 
 impl crate::DeepMerge for EndpointAddress {
     fn merge_from(&mut self, other: Self) {

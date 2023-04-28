@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.TopologySelectorTerm
 
 /// A topology selector term represents the result of label queries. A null or empty topology selector term matches no objects. The requirements of them are ANDed. It provides a subset of functionality as NodeSelectorTerm. This is an alpha feature and may change in the future.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TopologySelectorTerm {
     /// A list of topology selector requirements by labels.
     pub match_label_expressions: Option<Vec<crate::api::core::v1::TopologySelectorLabelRequirement>>,
 }
+
 
 impl crate::DeepMerge for TopologySelectorTerm {
     fn merge_from(&mut self, other: Self) {

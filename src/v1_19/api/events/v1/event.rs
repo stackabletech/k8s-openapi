@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.events.v1.Event
 
 /// Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, value_size::Size)]
 pub struct Event {
     /// action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.
     pub action: Option<String>,
@@ -47,6 +47,7 @@ pub struct Event {
     /// type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable.
     pub type_: Option<String>,
 }
+
 
 // Begin events.k8s.io/v1/Event
 

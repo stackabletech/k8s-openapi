@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.storage.v1beta1.TokenRequest
 
 /// TokenRequest contains parameters of a service account token.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TokenRequest {
     /// Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.
     pub audience: String,
@@ -9,6 +9,7 @@ pub struct TokenRequest {
     /// ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"
     pub expiration_seconds: Option<i64>,
 }
+
 
 impl crate::DeepMerge for TokenRequest {
     fn merge_from(&mut self, other: Self) {

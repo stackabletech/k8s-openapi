@@ -2,7 +2,7 @@
 
 /// Common parameters for all replace operations.
 #[cfg(feature = "api")]
-#[derive(Clone, Copy, Debug, Default, PartialEq)]
+#[derive(Clone, Copy, Debug, Default, PartialEq, value_size::Size)]
 pub struct ReplaceOptional<'a> {
     /// When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
     pub dry_run: Option<&'a str>,
@@ -10,6 +10,7 @@ pub struct ReplaceOptional<'a> {
     /// fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
     pub field_manager: Option<&'a str>,
 }
+
 
 #[cfg(feature = "api")]
 impl<'a> ReplaceOptional<'a> {

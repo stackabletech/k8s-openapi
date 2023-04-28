@@ -3,7 +3,7 @@
 /// VolumeAttachment captures the intent to attach or detach the specified volume to/from the specified node.
 ///
 /// VolumeAttachment objects are non-namespaced.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VolumeAttachment {
     /// Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -14,6 +14,7 @@ pub struct VolumeAttachment {
     /// Status of the VolumeAttachment request. Populated by the entity completing the attach or detach operation, i.e. the external-attacher.
     pub status: Option<crate::api::storage::v1alpha1::VolumeAttachmentStatus>,
 }
+
 
 // Begin storage.k8s.io/v1alpha1/VolumeAttachment
 

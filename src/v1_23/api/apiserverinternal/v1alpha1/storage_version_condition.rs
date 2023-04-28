@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apiserverinternal.v1alpha1.StorageVersionCondition
 
 /// Describes the state of the storageVersion at a certain point.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StorageVersionCondition {
     /// Last time the condition transitioned from one status to another.
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
@@ -21,6 +21,7 @@ pub struct StorageVersionCondition {
     /// Type of the condition.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for StorageVersionCondition {
     fn merge_from(&mut self, other: Self) {

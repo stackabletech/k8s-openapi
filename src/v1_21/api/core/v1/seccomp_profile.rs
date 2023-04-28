@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.SeccompProfile
 
 /// SeccompProfile defines a pod/container's seccomp profile settings. Only one profile source may be set.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SeccompProfile {
     /// localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".
     pub localhost_profile: Option<String>,
@@ -11,6 +11,7 @@ pub struct SeccompProfile {
     /// Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for SeccompProfile {
     fn merge_from(&mut self, other: Self) {

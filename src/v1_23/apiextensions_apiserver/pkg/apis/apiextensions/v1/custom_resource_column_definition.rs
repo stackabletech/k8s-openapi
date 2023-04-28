@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceColumnDefinition
 
 /// CustomResourceColumnDefinition specifies a column for server side printing.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CustomResourceColumnDefinition {
     /// description is a human readable description of this column.
     pub description: Option<String>,
@@ -21,6 +21,7 @@ pub struct CustomResourceColumnDefinition {
     /// type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for CustomResourceColumnDefinition {
     fn merge_from(&mut self, other: Self) {

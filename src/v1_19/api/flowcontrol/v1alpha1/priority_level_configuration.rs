@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1alpha1.PriorityLevelConfiguration
 
 /// PriorityLevelConfiguration represents the configuration of a priority level.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PriorityLevelConfiguration {
     /// `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct PriorityLevelConfiguration {
     /// `status` is the current status of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     pub status: Option<crate::api::flowcontrol::v1alpha1::PriorityLevelConfigurationStatus>,
 }
+
 
 // Begin flowcontrol.apiserver.k8s.io/v1alpha1/PriorityLevelConfiguration
 

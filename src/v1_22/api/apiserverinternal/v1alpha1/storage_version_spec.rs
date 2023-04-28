@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apiserverinternal.v1alpha1.StorageVersionSpec
 
 /// StorageVersionSpec is an empty spec.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct StorageVersionSpec(pub crate::serde_json::Value);
 
 impl crate::DeepMerge for StorageVersionSpec {

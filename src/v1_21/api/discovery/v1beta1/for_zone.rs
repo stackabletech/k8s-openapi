@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.discovery.v1beta1.ForZone
 
 /// ForZone provides information about which zones should consume this endpoint.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ForZone {
     /// name represents the name of the zone.
     pub name: String,
 }
+
 
 impl crate::DeepMerge for ForZone {
     fn merge_from(&mut self, other: Self) {

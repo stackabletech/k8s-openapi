@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.flowcontrol.v1alpha1.ResourcePolicyRule
 
 /// ResourcePolicyRule is a predicate that matches some resource requests, testing the request's verb and the target resource. A ResourcePolicyRule matches a resource request if and only if: (a) at least one member of verbs matches the request, (b) at least one member of apiGroups matches the request, (c) at least one member of resources matches the request, and (d) least one member of namespaces matches the request.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ResourcePolicyRule {
     /// `apiGroups` is a list of matching API groups and may not be empty. "*" matches all API groups and, if present, must be the only entry. Required.
     pub api_groups: Vec<String>,
@@ -18,6 +18,7 @@ pub struct ResourcePolicyRule {
     /// `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs and, if present, must be the only entry. Required.
     pub verbs: Vec<String>,
 }
+
 
 impl crate::DeepMerge for ResourcePolicyRule {
     fn merge_from(&mut self, other: Self) {

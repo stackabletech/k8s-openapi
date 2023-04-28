@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Secret
 
 /// Secret holds secret data of a certain type. The total bytes of the values in the Data field must be less than MaxSecretSize bytes.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Secret {
     /// Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
     pub data: Option<std::collections::BTreeMap<String, crate::ByteString>>,
@@ -18,6 +18,7 @@ pub struct Secret {
     /// Used to facilitate programmatic handling of secret data. More info: https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
     pub type_: Option<String>,
 }
+
 
 // Begin /v1/Secret
 

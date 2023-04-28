@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.NamespaceCondition
 
 /// NamespaceCondition contains details about state of namespace.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NamespaceCondition {
     pub last_transition_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
 
@@ -15,6 +15,7 @@ pub struct NamespaceCondition {
     /// Type of namespace controller condition.
     pub type_: String,
 }
+
 
 impl crate::DeepMerge for NamespaceCondition {
     fn merge_from(&mut self, other: Self) {

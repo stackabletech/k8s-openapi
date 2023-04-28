@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.networking.v1.NetworkPolicyPort
 
 /// NetworkPolicyPort describes a port to allow traffic on
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct NetworkPolicyPort {
     /// The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers.
     pub port: Option<crate::apimachinery::pkg::util::intstr::IntOrString>,
@@ -9,6 +9,7 @@ pub struct NetworkPolicyPort {
     /// The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
     pub protocol: Option<String>,
 }
+
 
 impl crate::DeepMerge for NetworkPolicyPort {
     fn merge_from(&mut self, other: Self) {

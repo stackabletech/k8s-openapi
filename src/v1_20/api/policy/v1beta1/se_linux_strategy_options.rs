@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.SELinuxStrategyOptions
 
 /// SELinuxStrategyOptions defines the strategy type and any options used to create the strategy.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SELinuxStrategyOptions {
     /// rule is the strategy that will dictate the allowable labels that may be set.
     pub rule: String,
@@ -9,6 +9,7 @@ pub struct SELinuxStrategyOptions {
     /// seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
     pub se_linux_options: Option<crate::api::core::v1::SELinuxOptions>,
 }
+
 
 impl crate::DeepMerge for SELinuxStrategyOptions {
     fn merge_from(&mut self, other: Self) {

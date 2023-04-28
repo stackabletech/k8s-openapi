@@ -1,11 +1,12 @@
 // Generated from definition io.k8s.api.core.v1.LocalObjectReference
 
 /// LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct LocalObjectReference {
     /// Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     pub name: Option<String>,
 }
+
 
 impl crate::DeepMerge for LocalObjectReference {
     fn merge_from(&mut self, other: Self) {

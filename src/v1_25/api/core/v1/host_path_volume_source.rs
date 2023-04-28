@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.HostPathVolumeSource
 
 /// Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct HostPathVolumeSource {
     /// path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
     pub path: String,
@@ -9,6 +9,7 @@ pub struct HostPathVolumeSource {
     /// type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
     pub type_: Option<String>,
 }
+
 
 impl crate::DeepMerge for HostPathVolumeSource {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.AllowedHostPath
 
 /// AllowedHostPath defines the host volume conditions that will be enabled by a policy for pods to use. It requires the path prefix to be defined.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AllowedHostPath {
     /// pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
     ///
@@ -11,6 +11,7 @@ pub struct AllowedHostPath {
     /// when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
     pub read_only: Option<bool>,
 }
+
 
 impl crate::DeepMerge for AllowedHostPath {
     fn merge_from(&mut self, other: Self) {

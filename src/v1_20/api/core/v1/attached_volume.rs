@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.AttachedVolume
 
 /// AttachedVolume describes a volume attached to a node
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct AttachedVolume {
     /// DevicePath represents the device path where the volume should be available
     pub device_path: String,
@@ -9,6 +9,7 @@ pub struct AttachedVolume {
     /// Name of the attached volume
     pub name: String,
 }
+
 
 impl crate::DeepMerge for AttachedVolume {
     fn merge_from(&mut self, other: Self) {

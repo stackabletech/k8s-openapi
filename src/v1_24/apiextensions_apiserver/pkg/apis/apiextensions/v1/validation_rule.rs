@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.ValidationRule
 
 /// ValidationRule describes a validation rule written in the CEL expression language.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ValidationRule {
     /// Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is "failed rule: {Rule}". e.g. "must be a URL with the host matching spec.host"
     pub message: Option<String>,
@@ -33,6 +33,7 @@ pub struct ValidationRule {
     ///     non-intersecting keys are appended, retaining their partial order.
     pub rule: String,
 }
+
 
 impl crate::DeepMerge for ValidationRule {
     fn merge_from(&mut self, other: Self) {

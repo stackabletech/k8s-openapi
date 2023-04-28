@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.SecretKeySelector
 
 /// SecretKeySelector selects a key of a Secret.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SecretKeySelector {
     /// The key of the secret to select from.  Must be a valid secret key.
     pub key: String,
@@ -12,6 +12,7 @@ pub struct SecretKeySelector {
     /// Specify whether the Secret or its key must be defined
     pub optional: Option<bool>,
 }
+
 
 impl crate::DeepMerge for SecretKeySelector {
     fn merge_from(&mut self, other: Self) {

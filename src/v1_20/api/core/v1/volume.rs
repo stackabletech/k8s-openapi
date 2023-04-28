@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.Volume
 
 /// Volume represents a named volume in a pod that may be accessed by any container in the pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct Volume {
     /// AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
     pub aws_elastic_block_store: Option<crate::api::core::v1::AWSElasticBlockStoreVolumeSource>,
@@ -106,6 +106,7 @@ pub struct Volume {
     /// VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
     pub vsphere_volume: Option<crate::api::core::v1::VsphereVirtualDiskVolumeSource>,
 }
+
 
 impl crate::DeepMerge for Volume {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authentication.v1.TokenReview
 
 /// TokenReview attempts to authenticate a token to a known user. Note: TokenReview requests may be cached by the webhook token authenticator plugin in the kube-apiserver.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TokenReview {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
@@ -11,6 +11,7 @@ pub struct TokenReview {
     /// Status is filled in by the server and indicates whether the request can be authenticated.
     pub status: Option<crate::api::authentication::v1::TokenReviewStatus>,
 }
+
 
 // Begin authentication.k8s.io/v1/TokenReview
 

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.apps.v1.DeploymentStatus
 
 /// DeploymentStatus is the most recently observed status of the Deployment.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct DeploymentStatus {
     /// Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
     pub available_replicas: Option<i32>,
@@ -27,6 +27,7 @@ pub struct DeploymentStatus {
     /// Total number of non-terminated pods targeted by this deployment that have the desired template spec.
     pub updated_replicas: Option<i32>,
 }
+
 
 impl crate::DeepMerge for DeploymentStatus {
     fn merge_from(&mut self, other: Self) {

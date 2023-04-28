@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.rbac.v1beta1.RoleBinding
 
 /// RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleBinding, and will no longer be served in v1.20.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct RoleBinding {
     /// Standard object's metadata.
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
@@ -12,6 +12,7 @@ pub struct RoleBinding {
     /// Subjects holds references to the objects the role applies to.
     pub subjects: Option<Vec<crate::api::rbac::v1beta1::Subject>>,
 }
+
 
 // Begin rbac.authorization.k8s.io/v1beta1/RoleBinding
 

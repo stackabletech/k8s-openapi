@@ -3,7 +3,7 @@
 /// Adapts a secret into a projected volume.
 ///
 /// The contents of the target Secret's Data field will be presented in a projected volume as files using the keys in the Data field as the file names. Note that this is identical to a secret volume source without the default mode.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct SecretProjection {
     /// items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.
     pub items: Option<Vec<crate::api::core::v1::KeyToPath>>,
@@ -14,6 +14,7 @@ pub struct SecretProjection {
     /// optional field specify whether the Secret or its key must be defined
     pub optional: Option<bool>,
 }
+
 
 impl crate::DeepMerge for SecretProjection {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.admissionregistration.v1beta1.MutatingWebhook
 
 /// MutatingWebhook describes an admission webhook and the resources and operations it applies to.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct MutatingWebhook {
     /// AdmissionReviewVersions is an ordered list of preferred `AdmissionReview` versions the Webhook expects. API server will try to use first version in the list which it supports. If none of the versions specified in this list supported by API server, validation will fail for this object. If a persisted webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail and be subject to the failure policy. Default to `\['v1beta1'\]`.
     pub admission_review_versions: Option<Vec<String>>,
@@ -78,6 +78,7 @@ pub struct MutatingWebhook {
     /// TimeoutSeconds specifies the timeout for this webhook. After the timeout passes, the webhook call will be ignored or the API call will fail based on the failure policy. The timeout value must be between 1 and 30 seconds. Default to 30 seconds.
     pub timeout_seconds: Option<i32>,
 }
+
 
 impl crate::DeepMerge for MutatingWebhook {
     fn merge_from(&mut self, other: Self) {

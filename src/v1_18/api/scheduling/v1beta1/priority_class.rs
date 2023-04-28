@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.scheduling.v1beta1.PriorityClass
 
 /// DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s.io/v1/PriorityClass. PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PriorityClass {
     /// description is an arbitrary string that usually provides guidelines on when this priority class should be used.
     pub description: Option<String>,
@@ -18,6 +18,7 @@ pub struct PriorityClass {
     /// The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.
     pub value: i32,
 }
+
 
 // Begin scheduling.k8s.io/v1beta1/PriorityClass
 

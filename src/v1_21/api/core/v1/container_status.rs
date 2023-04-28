@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ContainerStatus
 
 /// ContainerStatus contains details for the current status of this container.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ContainerStatus {
     /// Container's ID in the format 'docker://\<container_id\>'.
     pub container_id: Option<String>,
@@ -30,6 +30,7 @@ pub struct ContainerStatus {
     /// Details about the container's current condition.
     pub state: Option<crate::api::core::v1::ContainerState>,
 }
+
 
 impl crate::DeepMerge for ContainerStatus {
     fn merge_from(&mut self, other: Self) {

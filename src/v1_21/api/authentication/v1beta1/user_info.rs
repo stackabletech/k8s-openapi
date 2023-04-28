@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authentication.v1beta1.UserInfo
 
 /// UserInfo holds the information about the user needed to implement the user.Info interface.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct UserInfo {
     /// Any additional information provided by the authenticator.
     pub extra: Option<std::collections::BTreeMap<String, Vec<String>>>,
@@ -15,6 +15,7 @@ pub struct UserInfo {
     /// The name that uniquely identifies this user among all active users.
     pub username: Option<String>,
 }
+
 
 impl crate::DeepMerge for UserInfo {
     fn merge_from(&mut self, other: Self) {

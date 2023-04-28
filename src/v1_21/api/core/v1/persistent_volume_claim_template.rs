@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PersistentVolumeClaimTemplate
 
 /// PersistentVolumeClaimTemplate is used to produce PersistentVolumeClaim objects as part of an EphemeralVolumeSource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PersistentVolumeClaimTemplate {
     /// May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
     pub metadata: Option<crate::apimachinery::pkg::apis::meta::v1::ObjectMeta>,
@@ -9,6 +9,7 @@ pub struct PersistentVolumeClaimTemplate {
     /// The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
     pub spec: crate::api::core::v1::PersistentVolumeClaimSpec,
 }
+
 
 impl crate::DeepMerge for PersistentVolumeClaimTemplate {
     fn merge_from(&mut self, other: Self) {

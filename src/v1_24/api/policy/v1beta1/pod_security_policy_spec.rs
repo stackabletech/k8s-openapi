@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.policy.v1beta1.PodSecurityPolicySpec
 
 /// PodSecurityPolicySpec defines the policy enforced.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodSecurityPolicySpec {
     /// allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
     pub allow_privilege_escalation: Option<bool>,
@@ -79,6 +79,7 @@ pub struct PodSecurityPolicySpec {
     /// volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.
     pub volumes: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for PodSecurityPolicySpec {
     fn merge_from(&mut self, other: Self) {

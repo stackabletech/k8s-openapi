@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionNames
 
 /// CustomResourceDefinitionNames indicates the names to serve this CustomResourceDefinition
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CustomResourceDefinitionNames {
     /// categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
     pub categories: Option<Vec<String>>,
@@ -21,6 +21,7 @@ pub struct CustomResourceDefinitionNames {
     /// singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
     pub singular: Option<String>,
 }
+
 
 impl crate::DeepMerge for CustomResourceDefinitionNames {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.autoscaling.v1.ScaleStatus
 
 /// ScaleStatus represents the current status of a scale subresource.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ScaleStatus {
     /// actual number of observed instances of the scaled object.
     pub replicas: i32,
@@ -9,6 +9,7 @@ pub struct ScaleStatus {
     /// label query over pods that should match the replicas count. This is same as the label selector but in the string format to avoid introspection by clients. The string will be in the same format as the query-param syntax. More info about label selectors: http://kubernetes.io/docs/user-guide/labels#label-selectors
     pub selector: Option<String>,
 }
+
 
 impl crate::DeepMerge for ScaleStatus {
     fn merge_from(&mut self, other: Self) {

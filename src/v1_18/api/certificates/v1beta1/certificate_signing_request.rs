@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.certificates.v1beta1.CertificateSigningRequest
 
 /// Describes a certificate signing request
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CertificateSigningRequest {
     pub metadata: crate::apimachinery::pkg::apis::meta::v1::ObjectMeta,
 
@@ -11,6 +11,7 @@ pub struct CertificateSigningRequest {
     /// Derived information about the request.
     pub status: Option<crate::api::certificates::v1beta1::CertificateSigningRequestStatus>,
 }
+
 
 // Begin certificates.k8s.io/v1beta1/CertificateSigningRequest
 

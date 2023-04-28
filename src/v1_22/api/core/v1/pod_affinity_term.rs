@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.PodAffinityTerm
 
 /// Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key \<topologyKey\> matches that of any node on which a pod of the set of pods is running
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodAffinityTerm {
     /// A label query over a set of resources, in this case pods.
     pub label_selector: Option<crate::apimachinery::pkg::apis::meta::v1::LabelSelector>,
@@ -15,6 +15,7 @@ pub struct PodAffinityTerm {
     /// This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed.
     pub topology_key: String,
 }
+
 
 impl crate::DeepMerge for PodAffinityTerm {
     fn merge_from(&mut self, other: Self) {

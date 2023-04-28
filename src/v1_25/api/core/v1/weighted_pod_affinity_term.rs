@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.WeightedPodAffinityTerm
 
 /// The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct WeightedPodAffinityTerm {
     /// Required. A pod affinity term, associated with the corresponding weight.
     pub pod_affinity_term: crate::api::core::v1::PodAffinityTerm,
@@ -9,6 +9,7 @@ pub struct WeightedPodAffinityTerm {
     /// weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
     pub weight: i32,
 }
+
 
 impl crate::DeepMerge for WeightedPodAffinityTerm {
     fn merge_from(&mut self, other: Self) {

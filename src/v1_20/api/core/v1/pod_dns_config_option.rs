@@ -1,13 +1,14 @@
 // Generated from definition io.k8s.api.core.v1.PodDNSConfigOption
 
 /// PodDNSConfigOption defines DNS resolver options of a pod.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct PodDNSConfigOption {
     /// Required.
     pub name: Option<String>,
 
     pub value: Option<String>,
 }
+
 
 impl crate::DeepMerge for PodDNSConfigOption {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.authentication.v1.TokenRequestSpec
 
 /// TokenRequestSpec contains client provided parameters of a token request.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct TokenRequestSpec {
     /// Audiences are the intendend audiences of the token. A recipient of a token must identitfy themself with an identifier in the list of audiences of the token, and otherwise should reject the token. A token issued for multiple audiences may be used to authenticate against any of the audiences listed but implies a high degree of trust between the target audiences.
     pub audiences: Vec<String>,
@@ -12,6 +12,7 @@ pub struct TokenRequestSpec {
     /// ExpirationSeconds is the requested duration of validity of the request. The token issuer may return a token with a different validity duration so a client needs to check the 'expiration' field in a response.
     pub expiration_seconds: Option<i64>,
 }
+
 
 impl crate::DeepMerge for TokenRequestSpec {
     fn merge_from(&mut self, other: Self) {

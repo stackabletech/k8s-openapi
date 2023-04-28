@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.batch.v1beta1.CronJobStatus
 
 /// CronJobStatus represents the current state of a cron job.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct CronJobStatus {
     /// A list of pointers to currently running jobs.
     pub active: Option<Vec<crate::api::core::v1::ObjectReference>>,
@@ -9,6 +9,7 @@ pub struct CronJobStatus {
     /// Information when was the last time the job was successfully scheduled.
     pub last_schedule_time: Option<crate::apimachinery::pkg::apis::meta::v1::Time>,
 }
+
 
 impl crate::DeepMerge for CronJobStatus {
     fn merge_from(&mut self, other: Self) {

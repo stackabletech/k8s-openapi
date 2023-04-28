@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ScaleIOVolumeSource
 
 /// ScaleIOVolumeSource represents a persistent ScaleIO volume
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ScaleIOVolumeSource {
     /// Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".
     pub fs_type: Option<String>,
@@ -33,6 +33,7 @@ pub struct ScaleIOVolumeSource {
     /// The name of a volume already created in the ScaleIO system that is associated with this volume source.
     pub volume_name: Option<String>,
 }
+
 
 impl crate::DeepMerge for ScaleIOVolumeSource {
     fn merge_from(&mut self, other: Self) {

@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.ResourceQuotaSpec
 
 /// ResourceQuotaSpec defines the desired hard limits to enforce for Quota.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct ResourceQuotaSpec {
     /// hard is the set of desired hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
     pub hard: Option<std::collections::BTreeMap<String, crate::apimachinery::pkg::api::resource::Quantity>>,
@@ -12,6 +12,7 @@ pub struct ResourceQuotaSpec {
     /// A collection of filters that must match each object tracked by a quota. If not specified, the quota matches all objects.
     pub scopes: Option<Vec<String>>,
 }
+
 
 impl crate::DeepMerge for ResourceQuotaSpec {
     fn merge_from(&mut self, other: Self) {

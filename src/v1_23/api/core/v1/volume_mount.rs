@@ -1,7 +1,7 @@
 // Generated from definition io.k8s.api.core.v1.VolumeMount
 
 /// VolumeMount describes a mounting of a Volume within a container.
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, value_size::Size)]
 pub struct VolumeMount {
     /// Path within the container at which the volume should be mounted.  Must not contain ':'.
     pub mount_path: String,
@@ -21,6 +21,7 @@ pub struct VolumeMount {
     /// Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.
     pub sub_path_expr: Option<String>,
 }
+
 
 impl crate::DeepMerge for VolumeMount {
     fn merge_from(&mut self, other: Self) {
